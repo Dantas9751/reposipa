@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa - SIPA</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="container nav-container">
+
+      <div class="logo">
+        <i class="fa-solid fa-leaf"></i>
+        <span>SIPA</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#">Leis</a>
+        <a href="mapa.html" class="active">Mapa</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contato</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- MAPA -->
+  <section class="map-section">
+
+    <div class="map-top">
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          placeholder="Buscar coordenada ou endereço..."
+        >
+
+        <button>Buscar</button>
+
+      </div>
+
+      <button class="history-btn">
+        Acessar Histórico
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+    </div>
+
+    <!-- MAPA -->
+    <div class="map-container">
+
+      <img
+        src=""
+        alt="Área rural via satélite"
+      >
+
+      <!-- LEGENDA -->
+      <div class="legend">
+
+        <h4>
+          <i class="fa-solid fa-layer-group"></i>
+          Camadas
+        </h4>
+
+        <div class="legend-item">
+          <span class="red"></span>
+          Área de Preservação
+        </div>
+
+        <div class="legend-item">
+          <span class="blue"></span>
+          Alerta de Desmatamento
+        </div>
+
+        <div class="legend-item">
+          <span class="green"></span>
+          Área de Reserva Legal
+        </div>
+
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="zoom-controls">
+        <button>+</button>
+        <button>-</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      © 2026 Sistema de Visualização Geoespacial - APP. Todos os direitos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
