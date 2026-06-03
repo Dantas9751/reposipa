@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Source Sans 3', sans-serif;
+background:#ffffff;
+color:#1a2e0d;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+ul{
+list-style:none;
+}
+
+.menu{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:58px;
+background:#2d5016;
+display:flex;
+align-items:center;
+padding:0 40px;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:8px;
+color:white;
+font-family:'Merriweather', serif;
+font-size:1.2rem;
+font-weight:bold;
+}
+
+.logo svg{
+color:#4caf35;
+}
+
+.links-menu{
+display:flex;
+gap:28px;
+margin:0 auto;
+}
+
+.links-menu a{
+color:rgba(255,255,255,0.8);
+font-size:0.95rem;
+}
+
+.links-menu a:hover,
+.links-menu .ativo{
+color:#4caf35;
+font-weight:600;
+}
+
+.acessibilidade{
+color:white;
+cursor:pointer;
+}
+
+.conteudo{
+margin-top:58px;
+min-height:calc(100vh - 58px);
+}
+
+.banner{
+position:relative;
+min-height:420px;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.fundo-banner{
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+filter:brightness(0.55);
+}
+
+.texto-banner{
+position:relative;
+text-align:center;
+max-width:700px;
+padding:80px 20px;
+}
+
+.titulo-banner{
+font-family:'Merriweather', serif;
+color:white;
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.subtitulo-banner{
+color:rgba(255,255,255,0.9);
+font-size:1.05rem;
+margin-bottom:35px;
+}
+
+.botao-principal{
+display:inline-flex;
+align-items:center;
+gap:8px;
+background:#4caf35;
+color:white;
+padding:13px 30px;
+border-radius:50px;
+font-weight:600;
+}
+
+.botao-principal:hover{
+    background:#3a6b1a;
+}
+
+.recursos{
+background:#e8f5e2;
+padding:70px 30px;
+text-align:center;
+}
+
+.titulo-recursos{
+font-family:'Merriweather', serif;
+font-size:1.8rem;
+color:#2d5016;
+}
+
+.linha-recursos{
+width:50px;
+height:3px;
+background:#4caf35;
+margin:12px auto 18px;
+}
+
+.texto-recursos{
+max-width:500px;
+margin:0 auto 50px;
+color:#6b7c5e;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:24px;
+flex-wrap:wrap;
+}
+
+.card{
+width:280px;
+background:#dff0d8;
+padding:30px 25px;
+border-radius:18px;
+border:1px solid #c5ddb8;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.icone-card{
+width:44px;
+height:44px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+background:rgba(76,175,53,0.15);
+color:#3a6b1a;
+margin-bottom:18px;
+}
+
+.titulo-card{
+font-size:1.05rem;
+margin-bottom:10px;
+}
+
+.texto-card{
+font-size:0.9rem;
+}
+
+.secao-mapa{
+background:#e8f5e2;
+padding:60px 30px;
+}
+
+.titulo-mapa{
+text-align:center;
+color:#2d5016;
+font-family:'Merriweather', serif;
+font-size:1.9rem;
+margin-bottom:35px;
+}
+
+.controles{
+display:flex;
+gap:15px;
+max-width:920px;
+margin:0 auto 20px;
+}
+
+.busca{
+display:flex;
+flex:1;
+background:white;
+border:1px solid #c5ddb8;
+border-radius:8px;
+overflow:hidden;
+}
+
+.campo-busca{
+flex:1;
+border:none;
+padding:12px 15px;
+outline:none;
+}
+
+.btn-dark{
+background:#2d5016;
+color:white;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+}
+
+.botao-historico{
+border:1px solid #c5ddb8;
+background:white;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.area-mapa{
+max-width:920px;
+height:500px;
+margin:0 auto;
+background:white;
+border:1px solid #c5ddb8;
+border-radius:12px;
+position:relative;
+overflow:hidden;
+}
+
+.placeholder-mapa{
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#2d5016;
+gap:15px;
+}
+
+.legenda{
+position:absolute;
+left:20px;
+bottom:20px;
+background:white;
+padding:12px;
+border-radius:8px;
+border:1px solid #c5ddb8;
+}
+
+.titulo-legenda{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.item-legenda{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:6px;
+}
+
+.ponto{
+width:12px;
+height:12px;
+border-radius:50%;
+}
+
+.azul{
+background:#3b82f6;
+}
+
+.vermelho{
+background:#ef4444;
+}
+
+.amarelo{
+background:#d4a017;
+}
+
+.secao-contato{
+background:#e8f5e2;
+padding:60px 30px;
+}
+
+.titulo-contato{
+text-align:center;
+color:#2d5016;
+font-family:'Merriweather', serif;
+font-size:1.9rem;
+margin-bottom:10px;
+}
+
+.subtitulo-contato{
+text-align:center;
+max-width:600px;
+margin:0 auto 50px;
+}
+
+.corpo-contato{
+max-width:900px;
+margin:auto;
+display:flex;
+gap:30px;
+}
+
+.info-contato{
+width:260px;
+background:#2d5016;
+color:white;
+padding:30px;
+border-radius:18px;
+}
+
+.info-contato h2{
+margin-bottom:20px;
+}
+
+.item-info{
+display:flex;
+gap:12px;
+margin-bottom:25px;
+}
+
+.icone-info{
+width:36px;
+height:36px;
+background:rgba(255,255,255,0.1);
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:8px;
+}
+
+.formulario{
+flex:1;
+}
+
+.linha-formulario{
+display:flex;
+gap:15px;
+}
+
+.grupo-campo{
+display:flex;
+flex-direction:column;
+gap:6px;
+margin-bottom:18px;
+width:100%;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea{
+border:1px solid #c5ddb8;
+border-radius:8px;
+padding:12px;
+font-size:0.95rem;
+}
+
+.grupo-campo textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.botao-enviar{
+width:100%;
+background:#2d5016;
+color:white;
+border:none;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+font-size:1rem;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.botao-enviar:hover{
+    background:#3a6b1a;
+}
+
+.rodape{
+background:#1a2410;
+color:rgba(255,255,255,0.6);
+text-align:center;
+padding:22px;
+font-size:0.85rem;
+}
+
+@media (max-width: 768px){
+
+
+.links-menu{
+    gap:12px;
+    font-size:0.85rem;
+}
+
+.corpo-contato{
+    flex-direction:column;
+}
+
+.info-contato{
+    width:100%;
+}
+
+.linha-formulario{
+    flex-direction:column;
+}
+
+.controles{
+    flex-direction:column;
+}
+
+.busca{
+    width:100%;
+}
+
+.card{
+    width:100%;
+    max-width:350px;
+}
+
+.titulo-banner{
+    font-size:2rem;
+}
+
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPA - Fale Conosco</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <nav class="menu">
+    <a href="index.html" class="logo">
+      <i data-lucide="leaf" width="22" height="22"></i>
+      SIPA
+    </a>
+
+    <ul class="links-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#">Leis</a></li>
+      <li><a href="mapa.html">Mapa</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="contato.html" class="ativo">Contato</a></li>
+    </ul>
+
+    <span class="acessibilidade">
+      <i data-lucide="accessibility" width="22" height="22"></i>
+    </span>
+  </nav>
+
+  <main class="conteudo">
+
+    <section class="secao-contato">
+
+      <h1 class="titulo-contato">
+        <i data-lucide="mail" width="34" height="34"></i>
+        Fale Conosco
+      </h1>
+
+      <p class="subtitulo-contato">
+        Entre em contato para dúvidas técnicas, denúncias ambientais ou suporte
+        à plataforma SIPA.
+      </p>
+
+      <div class="corpo-contato">
+
+        <div class="info-contato">
+
+          <h2>Informações</h2>
+
+          <div class="item-info">
+            <div class="icone-info">
+              <i data-lucide="phone" width="18" height="18"></i>
+            </div>
+
+            <div>
+              <strong>Telefone</strong>
+
+              <p>
+                0800 123 4567<br>
+                (Segunda a Sexta, 8h às 18h)
+              </p>
+            </div>
+          </div>
+
+          <div class="item-info">
+            <div class="icone-info">
+              <i data-lucide="mail" width="18" height="18"></i>
+            </div>
+
+            <div>
+              <strong>E-mail</strong>
+
+              <p>
+                contato@sipa.gov.br<br>
+                suporte@sipa.gov.br
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="formulario">
+
+          <div class="linha-formulario">
+
+            <div class="grupo-campo">
+              <label for="nome">
+                Nome Completo *
+              </label>
+
+              <input
+                type="text"
+                id="nome"
+                placeholder="João da Silva"
+              >
+            </div>
+
+            <div class="grupo-campo">
+              <label for="email">
+                E-mail *
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="joao@exemplo.com"
+              >
+            </div>
+
+          </div>
+
+          <div class="grupo-campo">
+            <label for="assunto">
+              Assunto *
+            </label>
+
+            <select id="assunto">
+              <option selected disabled>
+                Selecione um assunto...
+              </option>
+
+              <option>Dúvida técnica</option>
+              <option>Denúncia ambiental</option>
+              <option>Suporte à plataforma</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="mensagem">
+              Mensagem
+            </label>
+
+            <textarea
+              id="mensagem"
+              placeholder="Descreva detalhadamente o motivo do seu contato..."
+            ></textarea>
+          </div>
+
+          <button class="botao-enviar" type="button">
+            Enviar Mensagem
+            <i data-lucide="send" width="18" height="18"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

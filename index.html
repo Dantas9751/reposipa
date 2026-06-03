@@ -1,133 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SIPA</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPA - Início</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
+  <nav class="menu">
+    <a href="index.html" class="logo">
+      <i data-lucide="leaf" width="22" height="22"></i>
+      SIPA
+    </a>
 
-    <div class="container nav-container">
+    <ul class="links-menu">
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="#">Leis</a></li>
+      <li><a href="mapa.html">Mapa</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
 
-      <div class="logo">
-        <i class="fa-solid fa-leaf"></i>
-        <span>SIPA</span>
+    <span class="acessibilidade" title="Acessibilidade">
+      <i data-lucide="accessibility" width="22" height="22"></i>
+    </span>
+  </nav>
+
+  <main class="conteudo">
+
+    <section class="banner">
+      <div class="fundo-banner"></div>
+
+      <div class="texto-banner">
+        <h1 class="titulo-banner">Bem-vindo ao SIPA</h1>
+
+        <p class="subtitulo-banner">
+          Sistema Integrado de Planejamento Ambiental que permite identificar
+          Áreas de Preservação Permanente (APPs) em zonas rurais.
+        </p>
+
+        <a href="mapa.html" class="botao-principal">
+          Acessar Mapa
+          <i data-lucide="arrow-right" width="18" height="18"></i>
+        </a>
       </div>
+    </section>
 
-      <!-- MENU CENTRALIZADO -->
-      <nav class="menu">
-        <a href="index.html" class="active">Início</a>
-        <a href="#">Leis</a>
-        <a href="mapa.html">Mapa</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contato</a>
-      </nav>
+    <section class="recursos">
+      <h2 class="titulo-recursos">Recursos Principais</h2>
 
-    </div>
+      <div class="linha-recursos"></div>
 
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-      <h1>Bem-vindo ao SIPA</h1>
-
-      <p>
-        Sistema Integrado de Planejamento Ambiental que permita identificar
-        Áreas de Preservação Permanente (APPs) em zonas rurais
-      </p>
-
-      <!-- PONTE ENTRE AS PÁGINAS -->
-      <a href="mapa.html" class="btn">
-        Acessar Mapa
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- RECURSOS -->
-  <section class="features">
-
-    <div class="section-title">
-      <h2>Recursos Principais</h2>
-
-      <div class="line"></div>
-
-      <p>
+      <p class="texto-recursos">
         Explore as ferramentas disponíveis em nossa plataforma para análise
-        e visualização geográfica
+        e visualização geográfica.
       </p>
-    </div>
 
-    <div class="cards">
+      <div class="cards">
 
-      <div class="card">
-        <div class="circle"></div>
+        <div class="card">
+          <div class="icone-card">
+            <i data-lucide="leaf" width="22" height="22"></i>
+          </div>
 
-        <div class="icon">
-          <i class="fa-solid fa-chart-column"></i>
+          <h3 class="titulo-card">Suporte e Consultoria</h3>
+
+          <p class="texto-card">
+            Tem dúvidas sobre como utilizar as ferramentas ou interpretar os
+            dados? Nossa equipe ajuda.
+          </p>
         </div>
 
-        <h3>Monitoramento de APPs</h3>
+        <div class="card">
+          <div class="icone-card">
+            <i data-lucide="bar-chart-2" width="22" height="22"></i>
+          </div>
 
-        <p>
-          Visualize áreas de preservação e acompanhe indicadores em tempo real.
-        </p>
-      </div>
+          <h3 class="titulo-card">Monitoramento de APPs</h3>
 
-      <div class="card">
-        <div class="circle"></div>
-
-        <div class="icon">
-          <i class="fa-solid fa-shield-heart"></i>
+          <p class="texto-card">
+            Visualize áreas de preservação e acompanhe indicadores em tempo
+            real com precisão de satélite.
+          </p>
         </div>
 
-        <h3>Legislação Ambiental</h3>
+        <div class="card">
+          <div class="icone-card">
+            <i data-lucide="shield-check" width="22" height="22"></i>
+          </div>€
 
-        <p>
-          Acesso simplificado ao código florestal e áreas de preservação.
-        </p>
-      </div>
+          <h3 class="titulo-card">Legislação Ambiental</h3>
 
-      <div class="card">
-        <div class="circle"></div>
-
-        <div class="icon">
-          <i class="fa-solid fa-leaf"></i>
+          <p class="texto-card">
+            Acesso simplificado ao código florestal e áreas de proteção
+            permanente. Saiba as regras em vigor.
+          </p>
         </div>
 
-        <h3>Suporte e Consultoria</h3>
-
-        <p>
-          Nossa equipe auxilia na interpretação e uso das ferramentas.
-        </p>
       </div>
+    </section>
 
-    </div>
+  </main>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      © 2026 Sistema de Visualização Geoespacial - APP. Todos os direitos reservados.
-    </p>
+  <footer class="rodape">
+    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>

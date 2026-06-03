@@ -3,110 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa - SIPA</title>
+  <title>SIPA - Mapa de Visualização</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
+  <nav class="menu">
+    <a href="index.html" class="logo">
+      <i data-lucide="leaf" width="22" height="22"></i>
+      SIPA
+    </a>
 
-    <div class="container nav-container">
+    <ul class="links-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#">Leis</a></li>
+      <li><a href="mapa.html" class="ativo">Mapa</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
 
-      <div class="logo">
-        <i class="fa-solid fa-leaf"></i>
-        <span>SIPA</span>
-      </div>
+    <span class="acessibilidade">
+      <i data-lucide="accessibility" width="22" height="22"></i>
+    </span>
+  </nav>
 
-      <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="#">Leis</a>
-        <a href="mapa.html" class="active">Mapa</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contato</a>
-      </nav>
+  <main class="conteudo">
 
-    </div>
+    <section class="secao-mapa">
 
-  </header>
+      <h1 class="titulo-mapa">
+        <i data-lucide="map-pin" width="34" height="34"></i>
+        Mapa de Visualização
+      </h1>
 
-  <!-- MAPA -->
-  <section class="map-section">
+      <div class="controles">
 
-    <div class="map-top">
+        <div class="busca">
+          <input
+            type="text"
+            class="campo-busca"
+            placeholder="Buscar coordenada ou endereço..."
+          >
 
-      <div class="search-box">
-
-        <input
-          type="text"
-          placeholder="Buscar coordenada ou endereço..."
-        >
-
-        <button>Buscar</button>
-
-      </div>
-
-      <button class="history-btn">
-        Acessar Histórico
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-
-    </div>
-
-    <!-- MAPA -->
-    <div class="map-container">
-
-      <img
-        src=""
-        alt="Área rural via satélite"
-      >
-
-      <!-- LEGENDA -->
-      <div class="legend">
-
-        <h4>
-          <i class="fa-solid fa-layer-group"></i>
-          Camadas
-        </h4>
-
-        <div class="legend-item">
-          <span class="red"></span>
-          Área de Preservação
+          <button class="btn-dark">
+            Buscar
+          </button>
         </div>
 
-        <div class="legend-item">
-          <span class="blue"></span>
-          Alerta de Desmatamento
+        <button class="botao-historico">
+          Acessar Histórico
+          <i data-lucide="search" width="16" height="16"></i>
+        </button>
+
+      </div>
+
+      <div class="area-mapa">
+
+        <div class="placeholder-mapa">
+          <i data-lucide="map" width="70" height="70"></i>
+
+          <h3>Mapa Geoespacial</h3>
+
+          <p>
+            Área reservada para a futura integração do sistema de
+            visualização geográfica.
+          </p>
         </div>
 
-        <div class="legend-item">
-          <span class="green"></span>
-          Área de Reserva Legal
+        <div class="legenda">
+
+          <div class="titulo-legenda">
+            <i data-lucide="layers" width="15" height="15"></i>
+            Camadas
+          </div>
+
+          <div class="item-legenda">
+            <span class="ponto azul"></span>
+            Alerta de Desmatamento
+          </div>
+
+          <div class="item-legenda">
+            <span class="ponto vermelho"></span>
+            Área de Preservação
+          </div>
+
+          <div class="item-legenda">
+            <span class="ponto amarelo"></span>
+            Área de Reserva Legal
+          </div>
+
         </div>
 
       </div>
 
-      <!-- CONTROLES -->
-      <div class="zoom-controls">
-        <button>+</button>
-        <button>-</button>
-      </div>
+    </section>
 
-    </div>
+  </main>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      © 2026 Sistema de Visualização Geoespacial - APP. Todos os direitos reservados.
-    </p>
+  <footer class="rodape">
+    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
