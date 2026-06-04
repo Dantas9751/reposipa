@@ -1,11 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPA - Legislação Ambiental</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
-    
+
+  <nav class="menu">
+    <a href="index.html" class="logo">
+      <i data-lucide="leaf" width="22" height="22"></i>
+      SIPA
+    </a>
+
+    <ul class="links-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="leis.html" class="ativo">Leis</a></li>
+      <li><a href="mapa.html">Mapa</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <span class="acessibilidade" title="Acessibilidade">
+      <i data-lucide="accessibility" width="22" height="22"></i>
+    </span>
+  </nav>
+
+  <main class="conteudo">
+
+    <section class="leis">
+
+      <h1 class="titulo-leis">
+        <i data-lucide="scale" width="32" height="32"></i>
+        Legislação Ambiental
+      </h1>
+
+      <p class="texto-leis">
+        Consulte leis, decretos e normativas voltadas à preservação ambiental
+        e ao desenvolvimento sustentável.
+      </p>
+
+      <div class="conteudo-leis">
+
+        <aside class="indice">
+
+          <h3>Índice</h3>
+
+          <ul>
+            <li>
+              <a href="#pnma">
+                <i data-lucide="file-text" width="14" height="14"></i>
+                Política Nacional do Meio Ambiente
+              </a>
+            </li>
+
+            <li>
+              <a href="#codigo">
+                <i data-lucide="shield" width="14" height="14"></i>
+                Código Florestal
+              </a>
+            </li>
+
+            <li>
+              <a href="#snuc">
+                <i data-lucide="file-check" width="14" height="14"></i>
+                SNUC
+              </a>
+            </li>
+          </ul>
+
+        </aside>
+
+        <div class="artigos">
+
+          <article class="artigo" id="pnma">
+
+            <p class="numero">
+              Lei Nº 6.938, de 31 de Agosto de 1981
+            </p>
+
+            <h2 class="titulo-artigo">
+              Política Nacional do Meio Ambiente
+            </h2>
+
+            <p class="texto-artigo">
+              Dispõe sobre a Política Nacional do Meio Ambiente,
+              seus fins e mecanismos de formulação e aplicação,
+              constitui o SISNAMA e institui o Cadastro de Defesa Ambiental.
+            </p>
+
+            <p class="texto-artigo">
+              É considerada a principal base legal do licenciamento
+              ambiental brasileiro.
+            </p>
+
+          </article>
+
+          <article class="artigo" id="codigo">
+
+            <p class="numero">
+              Lei Nº 12.651, de 25 de Maio de 2012
+            </p>
+
+            <h2 class="titulo-artigo">
+              Novo Código Florestal
+            </h2>
+
+            <p class="texto-artigo">
+              Define normas sobre APPs, Reserva Legal,
+              exploração florestal e proteção da vegetação nativa.
+            </p>
+
+            <div class="citacao">
+              "A proteção da vegetação nativa é fundamental para a conservação dos recursos naturais e da biodiversidade."
+            </div>
+
+            <h3 class="subtitulo">
+              Áreas de Preservação Permanente
+            </h3>
+
+            <p class="texto-artigo">
+              As APPs são áreas protegidas destinadas à preservação
+              dos recursos hídricos, biodiversidade e estabilidade ambiental.
+            </p>
+
+            <a href="#" class="link-lei">
+              Ler lei completa
+              <i data-lucide="external-link" width="14" height="14"></i>
+            </a>
+
+          </article>
+
+          <article class="artigo" id="snuc">
+
+            <p class="numero">
+              Lei Nº 9.985, de 18 de Julho de 2000
+            </p>
+
+            <h2 class="titulo-artigo">
+              Sistema Nacional de Unidades de Conservação
+            </h2>
+
+            <p class="texto-artigo">
+              Estabelece critérios para criação, implantação e gestão
+              das unidades de conservação no Brasil.
+            </p>
+
+            <h3 class="subtitulo">
+              Categorias
+            </h3>
+
+            <ul class="lista">
+
+              <li>
+                <strong>Proteção Integral:</strong>
+                preservação da natureza com uso indireto dos recursos.
+              </li>
+
+              <li>
+                <strong>Uso Sustentável:</strong>
+                conservação ambiental com utilização sustentável dos recursos.
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
