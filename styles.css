@@ -439,6 +439,7 @@ ul {
 .grupo-campo input:focus,
 .grupo-campo select:focus,
 .grupo-campo textarea:focus {
+    
     border-color: #4caf35;
     box-shadow: 0 0 0 3px rgba(76,175,53,0.12);
 }
@@ -690,4 +691,3 @@ ul {
         padding: 30px 22px;
     }
 }
- 

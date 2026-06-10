@@ -38,7 +38,7 @@
       </h1>
 
       <p class="subtitulo-contato">
-        Entre em contato para dúvidas técnicas, denúncias ambientais ou suporte
+        Entre em contato para dúvidas, denúncias ambientais ou suporte
         à plataforma SIPA.
       </p>
 
@@ -78,7 +78,7 @@
 
         </address>
 
-        <form class="formulario" id="formContato" novalidate>
+        <form class="formulario" id="formContato">
 
           <div class="linha-formulario">
 
@@ -94,8 +94,8 @@
                 placeholder="João da Silva"
                 required
                 autocomplete="name"
-                pattern="[A-Za-zÀ-ÿ\s]+"
-                title="Favor inserir nome completo."
+                pattern="^[A-Za-zÀ-ÿ]{2,}(\s[A-Za-zÀ-ÿ]{2,})+$"
+                title="Digite seu nome completo (pelo menos duas palavras, cada uma com 2 ou mais letras)"
               >
             </div>
 
@@ -111,6 +111,8 @@
                 placeholder="joao@exemplo.com"
                 required
                 autocomplete="email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                title="Digite um e-mail válido (ex: seu.email@exemplo.com)"
               >
             </div>
 
@@ -121,7 +123,8 @@
               Assunto <abbr title="obrigatório">*</abbr>
             </label>
 
-            <select id="assunto" name="assunto" required>
+            <select id="assunto" name="assunto" required
+              title="Selecione um assunto">
               <option value="" selected disabled>
                 Selecione um assunto...
               </option>
@@ -143,10 +146,11 @@
               name="mensagem"
               placeholder="Descreva detalhadamente o motivo do seu contato..."
               minlength="20"
+              title="A mensagem deve ter pelo menos 20 caracteres"
             ></textarea>
           </div>
 
-          <button class="botao-enviar" type="submit">
+          <button class="botao-enviar" type="submit"> 
             Enviar Mensagem
             <i data-lucide="send" width="18" height="18"></i>
           </button>

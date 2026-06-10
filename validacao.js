@@ -8,6 +8,7 @@ form.addEventListener("submit", function(event) {
 
 const nomeInput = document.getElementById("nome");
 nomeInput.addEventListener("input", () => {
+    console.log(nomeInput.value);
     nomeInput.value = nomeInput.value.replace(/\d/g, "");
 });
 
