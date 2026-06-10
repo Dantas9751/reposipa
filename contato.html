@@ -33,7 +33,7 @@
     <section class="secao-contato">
 
       <h1 class="titulo-contato" id="titulo-contato">
-        <i data-lucide="mail" width="34" height="34" ></i>
+        <i data-lucide="mail" width="34" height="34"></i>
         Fale Conosco
       </h1>
 
@@ -63,7 +63,7 @@
           </article>
 
           <article class="item-info">
-            <span class="icone-info" >
+            <span class="icone-info">
               <i data-lucide="mail" width="18" height="18"></i>
             </span>
 
@@ -94,6 +94,8 @@
                 placeholder="João da Silva"
                 required
                 autocomplete="name"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                title="Favor inserir nome completo."
               >
             </div>
 
@@ -140,6 +142,7 @@
               id="mensagem"
               name="mensagem"
               placeholder="Descreva detalhadamente o motivo do seu contato..."
+              minlength="20"
             ></textarea>
           </div>
 
@@ -166,4 +169,4 @@
   <script src="validacao.js"></script>
 
 </body>
-</html> 
+</html>
