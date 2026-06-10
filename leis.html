@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIPA - Legislação Ambiental</title>
-
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
@@ -20,20 +19,20 @@
       <li><a href="index.html">Início</a></li>
       <li><a href="leis.html" class="ativo">Leis</a></li>
       <li><a href="mapa.html">Mapa</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="#">FAQ</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
 
-    <span class="acessibilidade" title="Acessibilidade">
-      <i data-lucide="accessibility" width="22" height="22"></i>
-    </span>
+    <button class="acessibilidade" title="Acessibilidade">
+      <i data-lucide="accessibility" width="30" height="30"></i>
+    </button>
   </nav>
 
   <main class="conteudo">
 
     <section class="leis">
 
-      <h1 class="titulo-leis">
+      <h1 class="titulo-leis" id="titulo-leis">
         <i data-lucide="scale" width="32" height="32"></i>
         Legislação Ambiental
       </h1>
@@ -45,9 +44,9 @@
 
       <div class="conteudo-leis">
 
-        <aside class="indice">
+        <nav class="indice">
 
-          <h3>Índice</h3>
+          <h2>Índice</h2>
 
           <ul>
             <li>
@@ -72,7 +71,7 @@
             </li>
           </ul>
 
-        </aside>
+        </nav>
 
         <div class="artigos">
 
@@ -114,9 +113,9 @@
               exploração florestal e proteção da vegetação nativa.
             </p>
 
-            <div class="citacao">
+            <blockquote class="citacao">
               "A proteção da vegetação nativa é fundamental para a conservação dos recursos naturais e da biodiversidade."
-            </div>
+            </blockquote>
 
             <h3 class="subtitulo">
               Áreas de Preservação Permanente
@@ -178,7 +177,7 @@
   </main>
 
   <footer class="rodape">
-    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
+    <p>© 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.</p>
   </footer>
 
   <script>

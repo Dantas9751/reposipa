@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIPA - Mapa de Visualização</title>
-
+  <title>SIPA - Mapa Geoespacial</title>
   <link rel="stylesheet" href="styles.css">
-
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -21,90 +19,88 @@
       <li><a href="index.html">Início</a></li>
       <li><a href="leis.html">Leis</a></li>
       <li><a href="mapa.html" class="ativo">Mapa</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="#">FAQ</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
 
-    <span class="acessibilidade">
-      <i data-lucide="accessibility" width="22" height="22"></i>
-    </span>
+    <button class="acessibilidade" title="Acessibilidade">
+      <i data-lucide="accessibility" width="30" height="30"></i>
+    </button>
   </nav>
 
   <main class="conteudo">
 
     <section class="secao-mapa">
 
-      <h1 class="titulo-mapa">
-        <i data-lucide="map-pin" width="34" height="34"></i>
-        Mapa de Visualização
+      <h1 class="titulo-mapa" id="titulo-mapa">
+      <i data-lucide="map" width="32" height="32"></i>
+        Mapa Geoespacial
       </h1>
 
-      <div class="controles">
+      <search class="controles">
 
-        <div class="busca">
+        <form class="busca" role="search">
           <input
-            type="text"
+            type="search"
+            id="campo-busca"
             class="campo-busca"
             placeholder="Buscar coordenada ou endereço..."
           >
 
-          <button class="btn-dark">
+          <button class="btn-dark" type="submit">
             Buscar
           </button>
-        </div>
+        </form>
 
-        <button class="botao-historico">
+        <button class="botao-historico" type="button">
           Acessar Histórico
           <i data-lucide="search" width="16" height="16"></i>
         </button>
 
-      </div>
+      </search>
 
-      <div class="area-mapa">
+<figure class="area-mapa">
 
-        <div class="placeholder-mapa">
-          <i data-lucide="map" width="70" height="70"></i>
+  <img
+    src="./imagens/mapa.jpeg"
+    alt="Mapa Geoespacial"
+    class="imagem-mapa"
+  >
 
-          <h3>Mapa Geoespacial</h3>
+  <aside class="legenda">
 
-          <p>
-            Área reservada para a futura integração do sistema de
-            visualização geográfica.
-          </p>
-        </div>
+    <h2 class="titulo-legenda">
+      <i data-lucide="layers" width="15" height="15"></i>
+      Camadas
+    </h2>
 
-        <div class="legenda">
+    <ul>
+      <li class="item-legenda">
+        <span class="ponto azul"></span>
+        Alerta de Desmatamento
+      </li>
 
-          <div class="titulo-legenda">
-            <i data-lucide="layers" width="15" height="15"></i>
-            Camadas
-          </div>
+      <li class="item-legenda">
+        <span class="ponto vermelho"></span>
+        Área de Preservação
+      </li>
 
-          <div class="item-legenda">
-            <span class="ponto azul"></span>
-            Alerta de Desmatamento
-          </div>
+      <li class="item-legenda">
+        <span class="ponto amarelo"></span>
+        Área de Reserva Legal
+      </li>
+    </ul>
 
-          <div class="item-legenda">
-            <span class="ponto vermelho"></span>
-            Área de Preservação
-          </div>
+  </aside>
 
-          <div class="item-legenda">
-            <span class="ponto amarelo"></span>
-            Área de Reserva Legal
-          </div>
-
-        </div>
-
-      </div>
+</figure>
 
     </section>
 
   </main>
 
   <footer class="rodape">
-    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
+    <p>© 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.</p>
   </footer>
 
   <script>

@@ -19,19 +19,19 @@
       <li><a href="index.html" class="ativo">Início</a></li>
       <li><a href="leis.html">Leis</a></li>
       <li><a href="mapa.html">Mapa</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="#">FAQ</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
 
-    <span class="acessibilidade" title="Acessibilidade">
-      <i data-lucide="accessibility" width="22" height="22"></i>
-    </span>
+    <button class="acessibilidade" title="Acessibilidade">
+      <i data-lucide="accessibility" width="30" height="30"></i>
+    </button>
   </nav>
 
   <main class="conteudo">
 
     <section class="banner">
-      <div class="fundo-banner"></div>
+      <figure class="fundo-banner"></figure>
 
       <div class="texto-banner">
         <h1 class="titulo-banner">Bem-vindo ao SIPA</h1>
@@ -48,22 +48,22 @@
       </div>
     </section>
 
-    <section class="recursos">
-      <h2 class="titulo-recursos">Recursos Principais</h2>
+    <section class="recursos" >
+      <h2 class="titulo-recursos" id="titulo-recursos">Recursos Principais</h2>
 
-      <div class="linha-recursos"></div>
+      <hr class="linha-recursos">
 
       <p class="texto-recursos">
         Explore as ferramentas disponíveis em nossa plataforma para análise
         e visualização geográfica.
       </p>
 
-      <div class="cards">
+      <ul class="cards">
 
-        <div class="card">
-          <div class="icone-card">
+        <li class="card">
+          <span class="icone-card" >
             <i data-lucide="leaf" width="22" height="22"></i>
-          </div>
+          </span>
 
           <h3 class="titulo-card">Suporte e Consultoria</h3>
 
@@ -71,12 +71,12 @@
             Tem dúvidas sobre como utilizar as ferramentas ou interpretar os
             dados? Nossa equipe ajuda.
           </p>
-        </div>
+        </li>
 
-        <div class="card">
-          <div class="icone-card">
+        <li class="card">
+          <span class="icone-card">
             <i data-lucide="bar-chart-2" width="22" height="22"></i>
-          </div>
+          </span>
 
           <h3 class="titulo-card">Monitoramento de APPs</h3>
 
@@ -84,12 +84,12 @@
             Visualize áreas de preservação e acompanhe indicadores em tempo
             real com precisão de satélite.
           </p>
-        </div>
+        </li>
 
-        <div class="card">
-          <div class="icone-card">
+        <li class="card">
+          <span class="icone-card">
             <i data-lucide="shield-check" width="22" height="22"></i>
-          </div>
+          </span>
 
           <h3 class="titulo-card">Legislação Ambiental</h3>
 
@@ -97,15 +97,15 @@
             Acesso simplificado ao código florestal e áreas de proteção
             permanente. Saiba as regras em vigor.
           </p>
-        </div>
+        </li>
 
-      </div>
+      </ul>
     </section>
 
   </main>
 
   <footer class="rodape">
-    © 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.
+    <p>© 2026 Sistema de Visualização Geoespacial – APP. Todos os direitos reservados.</p>
   </footer>
 
   <script>

@@ -77,6 +77,10 @@ ul {
 .acessibilidade {
     color: white;
     cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
 }
  
 
@@ -103,6 +107,7 @@ ul {
     background-size: cover;
     background-position: center;
     filter: brightness(0.55);
+    margin: 0; 
 }
  
 .texto-banner {
@@ -158,8 +163,8 @@ ul {
     height: 3px;
     background: #4caf35;
     margin: 12px auto 18px;
+    border: none; 
 }
- 
 .texto-recursos {
     max-width: 500px;
     margin: 0 auto 50px;
@@ -171,6 +176,7 @@ ul {
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    padding: 0;
 }
  
 .card {
@@ -179,6 +185,7 @@ ul {
     padding: 30px 25px;
     border-radius: 18px;
     border: 1px solid #c5ddb8;
+    list-style: none;
 }
  
 .card:hover {
@@ -285,6 +292,11 @@ ul {
     z-index: 800;
 }
  
+.legenda ul {
+    padding: 0;
+    margin: 0;
+}
+ 
 .titulo-legenda {
     font-weight: bold;
     margin-bottom: 10px;
@@ -299,6 +311,18 @@ ul {
     gap: 8px;
     margin-bottom: 6px;
     font-size: 0.85rem;
+    list-style: none;
+}
+
+
+.citacao {
+    border-left: 3px solid #4caf35;
+    padding: 10px 16px;
+    margin: 16px 0;
+    color: #3a6b1a;
+    font-style: italic;
+    background: rgba(76,175,53,0.06);
+    border-radius: 0 8px 8px 0;
 }
  
 .ponto {
@@ -420,12 +444,6 @@ ul {
 }
  
 .grupo-campo select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7c5e' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-color: white;
-    padding-right: 40px;
     cursor: pointer;
 }
  
@@ -463,7 +481,162 @@ ul {
     padding: 22px;
     font-size: 0.85rem;
 }
- 
+
+.leis {
+    background: #e8f5e2;
+    padding: 60px 30px;
+    flex: 1;
+}
+
+.titulo-leis {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #2d5016;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.texto-leis {
+    text-align: center;
+    color: #6b7c5e;
+    max-width: 560px;
+    margin: 0 auto 48px;
+    font-size: 1rem;
+}
+
+.conteudo-leis {
+    display: flex;
+    gap: 28px;
+    max-width: 980px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+
+.indice {
+    width: 190px;
+    flex-shrink: 0;
+    background: white;
+    border: 1px solid #c5ddb8;
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 78px;
+}
+
+.indice h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2d5016;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.indice ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.indice a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #3a6b1a;
+    transition: color 0.15s;
+}
+
+.indice a:hover {
+    color: #4caf35;
+}
+
+
+.artigos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.artigo {
+    background: white;
+    border: 1px solid #c5ddb8;
+    border-radius: 14px;
+    padding: 32px 36px;
+}
+
+.numero {
+    font-size: 0.82rem;
+    color: #6b7c5e;
+    margin-bottom: 8px;
+}
+
+.titulo-artigo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.25rem;
+    color: #1a2e0d;
+    margin-bottom: 16px;
+    padding-left: 14px;
+    border-left: 4px solid #4caf35;
+}
+
+.texto-artigo {
+    color: #3d4f30;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.texto-artigo:last-of-type {
+    margin-bottom: 0;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2d5016;
+    margin: 20px 0 10px;
+}
+
+.lista {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista li {
+    font-size: 0.93rem;
+    color: #3d4f30;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.link-lei {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3a6b1a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 16px;
+    border-bottom: 1px solid #4caf35;
+    padding-bottom: 1px;
+    transition: color 0.15s;
+}
+
+.link-lei:hover {
+    color: #4caf35;
+}
 
 @media (max-width: 768px) {
     .links-menu {
@@ -498,6 +671,23 @@ ul {
  
     .titulo-banner {
         font-size: 2rem;
+    }
+
+    .conteudo-leis {
+        flex-direction: column;
+    }
+
+    .indice {
+        width: 100%;
+        position: static;
+    }
+
+    .artigo {
+        padding: 24px 20px;
+    }
+
+    .cta {
+        padding: 30px 22px;
     }
 }
  
