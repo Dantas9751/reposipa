@@ -187,10 +187,7 @@ ul {
     border: 1px solid #c5ddb8;
     list-style: none;
 }
- 
-.card:hover {
-    transform: translateY(-3px);
-}
+
  
 .icone-card {
     width: 44px;
@@ -220,12 +217,31 @@ ul {
     flex: 1; 
 }
  
-.titulo-mapa {
-    text-align: center;
-    color: #2d5016;
+
+.titulo-mapa, 
+.titulo-contato, 
+.titulo-leis {
     font-family: 'Merriweather', serif;
+    color: #2d5016;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.titulo-mapa {
     font-size: 1.9rem;
     margin-bottom: 35px;
+}
+
+.titulo-contato {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+.titulo-leis {
+    font-size: 2rem;
+    margin-bottom: 14px;
 }
  
 .controles {
@@ -271,7 +287,7 @@ ul {
 }
  
 .area-mapa {
-    max-width: 920px;
+    max-width: 900px;
     height: 460px;
     margin: 0 auto;
     background: white;
@@ -341,13 +357,6 @@ ul {
     flex: 1; 
 }
  
-.titulo-contato {
-    text-align: center;
-    color: #2d5016;
-    font-family: 'Merriweather', serif;
-    font-size: 1.9rem;
-    margin-bottom: 10px;
-}
  
 .subtitulo-contato {
     text-align: center;
@@ -427,6 +436,9 @@ ul {
 .grupo-campo input,
 .grupo-campo select,
 .grupo-campo textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 30px;
     border: 1px solid #c5ddb8;
     border-radius: 8px;
     padding: 12px;
@@ -434,6 +446,7 @@ ul {
     font-family: 'Source Sans 3', sans-serif;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+    
 }
  
 .grupo-campo input:focus,
@@ -446,6 +459,10 @@ ul {
  
 .grupo-campo select {
     cursor: pointer;
+    background-image: url('imagens/seta.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
 }
  
 .grupo-campo textarea {
@@ -489,17 +506,7 @@ ul {
     flex: 1;
 }
 
-.titulo-leis {
-    font-family: 'Merriweather', serif;
-    font-size: 2rem;
-    color: #2d5016;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 14px;
-    text-align: center;
-}
+
 
 .texto-leis {
     text-align: center;
@@ -690,4 +697,47 @@ ul {
     .cta {
         padding: 30px 22px;
     }
+}
+.botao-invalido {
+    background-color: #a0a0a0 !important; 
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.ponto {
+    position: relative; 
+    cursor: help;      
+}
+
+
+.ponto::after {
+    text-align: justify;
+    
+    content: attr(data-tooltip); 
+    position: absolute;
+    bottom: 150%;               
+    left: 1000%;
+    transform: translateX(-10%);
+    
+    background: #1a2e0d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;         
+    
+    white-space: normal;      
+    width: max-content;       
+    max-width: 200px;       
+    text-align: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    pointer-events: none;        
+}
+
+.ponto:hover::after {
+    opacity: 1;
+    visibility: visible;
 }

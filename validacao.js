@@ -1,28 +1,24 @@
 const form = document.getElementById("formContato");
+const botaoEnviar = document.querySelector(".botao-enviar");
+
+function verificarFormulario() {
+    if (!form.checkValidity()) {
+        botaoEnviar.classList.add("botao-invalido");
+    } else {
+        botaoEnviar.classList.remove("botao-invalido");
+    }
+}
+
+
+verificarFormulario();
+
+
+form.addEventListener("input", verificarFormulario);
+
 
 form.addEventListener("submit", function(event) {
+    alert("Mensagem enviada com sucesso!")
     if (!form.checkValidity()) {
-        event.preventDefault();
+        event.preventDefault(); 
     }
-});
-
-const nomeInput = document.getElementById("nome");
-nomeInput.addEventListener("input", () => {
-    console.log(nomeInput.value);
-    nomeInput.value = nomeInput.value.replace(/\d/g, "");
-});
-
-const emailInput = document.getElementById("email");
-emailInput.addEventListener("input", () => {
-    console.log(emailInput.value);
-});
-
-const assuntoInput = document.getElementById("assunto");
-assuntoInput.addEventListener("input", () => {
-    console.log(assuntoInput.value);
-});
-
-const mensagemInput = document.getElementById("mensagem");
-mensagemInput.addEventListener("input", () => {
-    console.log(mensagemInput.value);
 });
