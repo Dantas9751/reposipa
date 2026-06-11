@@ -362,6 +362,8 @@ ul {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 50px;
+    color: #1a2e0d;
+    line-height: 1.6;
 }
  
 .corpo-contato {
@@ -493,7 +495,7 @@ ul {
  
 
 .rodape {
-    background: #1a2410;
+    background: #0a0a0a;
     color: rgba(255,255,255,0.6);
     text-align: center;
     padding: 22px;
@@ -532,8 +534,7 @@ ul {
     border: 1px solid #c5ddb8;
     border-radius: 12px;
     padding: 20px;
-    position: sticky;
-    top: 78px;
+    position: static;
 }
 
 .indice h2 {
@@ -708,36 +709,51 @@ ul {
     position: relative; 
     cursor: help;      
 }
+.com-tooltip {
+    position: relative;
+    cursor: help;
+    display: inline-flex;       
+    vertical-align: middle;    
+    margin-left: 4px;          
+}
 
 
-.ponto::after {
-    text-align: justify;
-    
-    content: attr(data-tooltip); 
+.ponto::after,
+.com-tooltip::after {
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 150%;               
-    left: 1000%;
-    transform: translateX(-10%);
     
+  
+    bottom: 140%;
+    left: 190%;
+    transform: translateX(-10px); 
+    
+
     background: #1a2e0d;
     color: white;
     padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 11px;
-    white-space: nowrap;         
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
     
-    white-space: normal;      
-    width: max-content;       
-    max-width: 200px;       
-    text-align: center;
-    
+
+    font-size: 12px;          
+    line-height: 1.4;            
+    text-align: justify;         
+    white-space: normal;        
+    width: max-content;        
+    max-width: 180px;           
+    hyphens: auto;              
+
+
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
     pointer-events: none;        
 }
 
-.ponto:hover::after {
+.ponto:hover::after,
+.com-tooltip:hover::after {
     opacity: 1;
     visibility: visible;
 }
