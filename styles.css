@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
- 
 
 html {
     height: 100%;
@@ -83,7 +82,6 @@ ul {
     align-items: center;
 }
  
-
 .conteudo {
     margin-top: 58px;
     flex: 1;
@@ -129,27 +127,20 @@ ul {
     font-size: 1.05rem;
     margin-bottom: 35px;
 }
- 
-.botao-principal {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #4caf35;
-    color: white;
-    padding: 13px 30px;
-    border-radius: 50px;
-    font-weight: 600;
+
+.secao-mapa, .secao-contato, .leis {
+    background: #e8f5e2;
+    padding: 60px 30px;
+    flex: 1; 
 }
- 
-.botao-principal:hover {
-    background: #3a6b1a;
-}
- 
+
 .recursos {
     background: #e8f5e2;
-    padding: 70px 30px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    flex: 1; 
 }
  
 .titulo-recursos {
@@ -165,6 +156,7 @@ ul {
     margin: 12px auto 18px;
     border: none; 
 }
+
 .texto-recursos {
     max-width: 500px;
     margin: 0 auto 50px;
@@ -172,6 +164,7 @@ ul {
 }
  
 .cards {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -187,7 +180,6 @@ ul {
     border: 1px solid #c5ddb8;
     list-style: none;
 }
-
  
 .icone-card {
     width: 44px;
@@ -210,14 +202,6 @@ ul {
     font-size: 0.9rem;
 }
  
-
-.secao-mapa {
-    background: #e8f5e2;
-    padding: 60px 30px;
-    flex: 1; 
-}
- 
-
 .titulo-mapa, 
 .titulo-contato, 
 .titulo-leis {
@@ -250,12 +234,15 @@ ul {
     max-width: 920px;
     margin: 0 auto 20px;
 }
+
+.busca, .botao-historico, .area-mapa, .legenda, .indice, .artigo {
+    background: white;
+    border: 1px solid #c5ddb8;
+}
  
 .busca {
     display: flex;
     flex: 1;
-    background: white;
-    border: 1px solid #c5ddb8;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -276,8 +263,6 @@ ul {
 }
  
 .botao-historico {
-    border: 1px solid #c5ddb8;
-    background: white;
     padding: 12px 18px;
     border-radius: 8px;
     cursor: pointer;
@@ -288,23 +273,26 @@ ul {
  
 .area-mapa {
     max-width: 900px;
-    height: 460px;
+    min-height: 460px;
     margin: 0 auto;
-    background: white;
-    border: 1px solid #c5ddb8;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+}
+
+.area-mapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
  
 .legenda {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: white;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #c5ddb8;
     z-index: 800;
 }
  
@@ -330,7 +318,6 @@ ul {
     list-style: none;
 }
 
-
 .citacao {
     border-left: 3px solid #4caf35;
     padding: 10px 16px;
@@ -350,19 +337,11 @@ ul {
 .azul    { background: #3b82f6; }
 .vermelho{ background: #ef4444; }
 .amarelo { background: #d4a017; }
-
-.secao-contato {
-    background: #e8f5e2;
-    padding: 60px 30px;
-    flex: 1; 
-}
- 
  
 .subtitulo-contato {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 50px;
-    color: #1a2e0d;
     line-height: 1.6;
 }
  
@@ -427,7 +406,6 @@ ul {
 .grupo-campo label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #1a2e0d;
 }
  
 .grupo-campo label .req {
@@ -448,52 +426,68 @@ ul {
     font-family: 'Source Sans 3', sans-serif;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
-    
 }
  
 .grupo-campo input:focus,
 .grupo-campo select:focus,
 .grupo-campo textarea:focus {
-    
+    outline: none;
     border-color: #4caf35;
-    box-shadow: 0 0 0 3px rgba(76,175,53,0.12);
+    box-shadow: 0 0 5px rgba(76, 175, 53, 0.3);
 }
  
 .grupo-campo select {
     cursor: pointer;
+    background-color: white;
     background-image: url('imagens/seta.svg');
     background-repeat: no-repeat;
-    background-position: right 10px top 50%;
-    background-size: 20px;
+    background-position: right 12px center;
+    background-size: 16px;
 }
  
 .grupo-campo textarea {
     min-height: 120px;
     resize: vertical;
 }
+
+.botao-principal, .botao-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.botao-principal {
+    background: #4caf35;
+    padding: 13px 30px;
+    border-radius: 50px;
+}
  
+.botao-principal:hover {
+    background: #3a6b1a;
+}
+
 .botao-enviar {
     width: 100%;
     background: #2d5016;
-    color: white;
     border: none;
     padding: 15px;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 1rem;
-    font-family: 'Source Sans 3', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.2s;
 }
  
 .botao-enviar:hover {
     background: #3a6b1a;
 }
- 
-
+.botao-enviar:not(:disabled):not(.botao-invalido):active {
+    transform: scale(0.98);
+    background: #254212;
+}
 .rodape {
     background: #0a0a0a;
     color: rgba(255,255,255,0.6);
@@ -501,14 +495,6 @@ ul {
     padding: 22px;
     font-size: 0.85rem;
 }
-
-.leis {
-    background: #e8f5e2;
-    padding: 60px 30px;
-    flex: 1;
-}
-
-
 
 .texto-leis {
     text-align: center;
@@ -526,12 +512,9 @@ ul {
     align-items: flex-start;
 }
 
-
 .indice {
     width: 190px;
     flex-shrink: 0;
-    background: white;
-    border: 1px solid #c5ddb8;
     border-radius: 12px;
     padding: 20px;
     position: static;
@@ -565,7 +548,6 @@ ul {
     color: #4caf35;
 }
 
-
 .artigos {
     flex: 1;
     display: flex;
@@ -574,8 +556,6 @@ ul {
 }
 
 .artigo {
-    background: white;
-    border: 1px solid #c5ddb8;
     border-radius: 14px;
     padding: 32px 36px;
 }
@@ -589,7 +569,6 @@ ul {
 .titulo-artigo {
     font-family: 'Merriweather', serif;
     font-size: 1.25rem;
-    color: #1a2e0d;
     margin-bottom: 16px;
     padding-left: 14px;
     border-left: 4px solid #4caf35;
@@ -653,23 +632,11 @@ ul {
         font-size: 0.85rem;
     }
  
-    .corpo-contato {
+    .corpo-contato, .linha-formulario, .controles, .conteudo-leis {
         flex-direction: column;
     }
  
-    .info-contato {
-        width: 100%;
-    }
- 
-    .linha-formulario {
-        flex-direction: column;
-    }
- 
-    .controles {
-        flex-direction: column;
-    }
- 
-    .busca {
+    .info-contato, .busca, .indice {
         width: 100%;
     }
  
@@ -682,23 +649,15 @@ ul {
         font-size: 2rem;
     }
 
-    .conteudo-leis {
-        flex-direction: column;
-    }
-
     .indice {
-        width: 100%;
         position: static;
     }
 
     .artigo {
         padding: 24px 20px;
     }
-
-    .cta {
-        padding: 30px 22px;
-    }
 }
+
 .botao-invalido {
     background-color: #a0a0a0 !important; 
     cursor: not-allowed;
@@ -706,9 +665,10 @@ ul {
 }
 
 .ponto {
-    position: relative; 
+    position: relative;
     cursor: help;      
 }
+
 .com-tooltip {
     position: relative;
     cursor: help;
@@ -717,26 +677,19 @@ ul {
     margin-left: 4px;          
 }
 
-
 .ponto::after,
 .com-tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
-    
-  
     bottom: 140%;
     left: 190%;
     transform: translateX(-10px); 
-    
-
     background: #1a2e0d;
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    
-
+    z-index: 1010;
     font-size: 12px;          
     line-height: 1.4;            
     text-align: justify;         
@@ -744,8 +697,6 @@ ul {
     width: max-content;        
     max-width: 180px;           
     hyphens: auto;              
-
-
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
