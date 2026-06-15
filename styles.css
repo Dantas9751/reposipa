@@ -1,94 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
+:root {
+    --cor-primaria: #4caf35;
+    --cor-secundaria: #2d5016;
+    --cor-fundo: #e8f5e2;
+    --cor-borda: #c5ddb8;
+    --cor-texto: #1a2e0d;
+    --cor-alerta: #e53e3e;
+    --cor-branco: #ffffff;
+    --cor-preto: #0a0a0a;
+}
+
 html {
     height: 100%;
 }
- 
+
 body {
     min-height: 100%;
     font-family: 'Source Sans 3', sans-serif;
-    background: #e8f5e2; 
-    color: #1a2e0d;
+    background: var(--cor-fundo); 
+    color: var(--cor-texto);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
 }
- 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 a {
     text-decoration: none;
     color: inherit;
 }
- 
+
 ul {
     list-style: none;
 }
- 
+
+.logo, .titulo-banner, .titulo-recursos, .titulo-mapa, .titulo-contato, .titulo-leis, .titulo-artigo {
+    font-family: 'Merriweather', serif;
+}
+
 .menu {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 58px;
-    background: #2d5016;
+    background: var(--cor-secundaria);
     display: flex;
     align-items: center;
     padding: 0 40px;
     z-index: 1000;
 }
- 
+
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
-    font-family: 'Merriweather', serif;
+    color: var(--cor-branco);
     font-size: 1.2rem;
     font-weight: bold;
 }
- 
+
 .logo svg {
-    color: #4caf35;
+    color: var(--cor-primaria);
 }
- 
+
 .links-menu {
     display: flex;
     gap: 28px;
     margin: 0 auto;
 }
- 
+
 .links-menu a {
     color: rgba(255,255,255,0.8);
     font-size: 0.95rem;
 }
- 
+
 .links-menu a:hover,
 .links-menu .ativo {
-    color: #4caf35;
+    color: var(--cor-primaria);
     font-weight: 600;
 }
- 
+
 .acessibilidade {
-    color: white;
+    color: var(--cor-branco);
     cursor: pointer;
     background: none;
     border: none;
     display: flex;
     align-items: center;
 }
- 
+
 .conteudo {
     margin-top: 58px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
- 
+
 .banner {
     position: relative;
     min-height: 420px;
@@ -97,7 +111,7 @@ ul {
     align-items: center;
     overflow: hidden;
 }
- 
+
 .fundo-banner {
     position: absolute;
     inset: 0;
@@ -107,52 +121,48 @@ ul {
     filter: brightness(0.55);
     margin: 0; 
 }
- 
+
 .texto-banner {
     position: relative;
     text-align: center;
     max-width: 700px;
     padding: 80px 20px;
 }
- 
+
 .titulo-banner {
-    font-family: 'Merriweather', serif;
-    color: white;
+    color: var(--cor-branco);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
- 
+
 .subtitulo-banner {
     color: rgba(255,255,255,0.9);
     font-size: 1.05rem;
     margin-bottom: 35px;
 }
 
-.secao-mapa, .secao-contato, .leis {
-    background: #e8f5e2;
+.secao-padrao {
+    background: var(--cor-fundo);
     padding: 60px 30px;
     flex: 1; 
 }
 
 .recursos {
-    background: #e8f5e2;
-    padding: 60px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
- 
+
 .titulo-recursos {
-    font-family: 'Merriweather', serif;
     font-size: 1.8rem;
-    color: #2d5016;
+    color: var(--cor-secundaria);
 }
- 
+
 .linha-recursos {
     width: 50px;
     height: 3px;
-    background: #4caf35;
+    background: var(--cor-primaria);
     margin: 12px auto 18px;
     border: none; 
 }
@@ -162,7 +172,7 @@ ul {
     margin: 0 auto 50px;
     color: #6b7c5e;
 }
- 
+
 .cards {
     width: 100%;
     display: flex;
@@ -171,16 +181,16 @@ ul {
     flex-wrap: wrap;
     padding: 0;
 }
- 
+
 .card {
     width: 280px;
     background: #dff0d8;
     padding: 30px 25px;
     border-radius: 18px;
-    border: 1px solid #c5ddb8;
+    border: 1px solid var(--cor-borda);
     list-style: none;
 }
- 
+
 .icone-card {
     width: 44px;
     height: 44px;
@@ -192,42 +202,28 @@ ul {
     color: #3a6b1a;
     margin-bottom: 18px;
 }
- 
+
 .titulo-card {
     font-size: 1.05rem;
     margin-bottom: 10px;
 }
- 
+
 .texto-card {
     font-size: 0.9rem;
 }
- 
+
 .titulo-mapa, 
 .titulo-contato, 
 .titulo-leis {
-    font-family: 'Merriweather', serif;
-    color: #2d5016;
+    color: var(--cor-secundaria);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-}
-
-.titulo-mapa {
-    font-size: 1.9rem;
-    margin-bottom: 35px;
-}
-
-.titulo-contato {
-    font-size: 1.9rem;
-    margin-bottom: 10px;
-}
-
-.titulo-leis {
     font-size: 2rem;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
 }
- 
+
 .controles {
     display: flex;
     gap: 15px;
@@ -236,32 +232,32 @@ ul {
 }
 
 .busca, .botao-historico, .area-mapa, .legenda, .indice, .artigo {
-    background: white;
-    border: 1px solid #c5ddb8;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
 }
- 
+
 .busca {
     display: flex;
     flex: 1;
     border-radius: 8px;
     overflow: hidden;
 }
- 
+
 .campo-busca {
     flex: 1;
     border: none;
     padding: 12px 15px;
     outline: none;
 }
- 
+
 .btn-dark {
-    background: #2d5016;
-    color: white;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
     border: none;
     padding: 12px 20px;
     cursor: pointer;
 }
- 
+
 .botao-historico {
     padding: 12px 18px;
     border-radius: 8px;
@@ -270,7 +266,7 @@ ul {
     align-items: center;
     gap: 8px;
 }
- 
+
 .area-mapa {
     max-width: 900px;
     min-height: 460px;
@@ -286,7 +282,7 @@ ul {
     object-fit: cover;
     display: block;
 }
- 
+
 .legenda {
     position: absolute;
     left: 20px;
@@ -295,12 +291,12 @@ ul {
     border-radius: 8px;
     z-index: 800;
 }
- 
+
 .legenda ul {
     padding: 0;
     margin: 0;
 }
- 
+
 .titulo-legenda {
     font-weight: bold;
     margin-bottom: 10px;
@@ -308,7 +304,7 @@ ul {
     align-items: center;
     gap: 6px;
 }
- 
+
 .item-legenda {
     display: flex;
     align-items: center;
@@ -319,7 +315,7 @@ ul {
 }
 
 .citacao {
-    border-left: 3px solid #4caf35;
+    border-left: 3px solid var(--cor-primaria);
     padding: 10px 16px;
     margin: 16px 0;
     color: #3a6b1a;
@@ -327,53 +323,55 @@ ul {
     background: rgba(76,175,53,0.06);
     border-radius: 0 8px 8px 0;
 }
- 
+
 .ponto {
     width: 16px;
     height: 8px;
     border-radius: 3px;
+    position: relative;
+    cursor: help;
 }
- 
+
 .azul    { background: #3b82f6; }
 .vermelho{ background: #ef4444; }
 .amarelo { background: #d4a017; }
- 
+
 .subtitulo-contato {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 50px;
     line-height: 1.6;
 }
- 
+
 .corpo-contato {
     max-width: 900px;
     margin: auto;
     display: flex;
     gap: 30px;
 }
- 
+
 .info-contato {
     width: 260px;
-    background: #2d5016;
-    color: white;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
     padding: 30px;
     border-radius: 18px;
     flex-shrink: 0;
 }
- 
+
 .info-contato h2 {
     margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid rgba(255,255,255,0.15);
 }
- 
+
 .item-info {
     display: flex;
     gap: 12px;
     margin-bottom: 25px;
     align-items: flex-start;
 }
- 
+
 .icone-info {
     width: 36px;
     height: 36px;
@@ -383,18 +381,18 @@ ul {
     justify-content: center;
     border-radius: 8px;
     flex-shrink: 0;
-    color: #4caf35;
+    color: var(--cor-primaria);
 }
- 
+
 .formulario {
     flex: 1;
 }
- 
+
 .linha-formulario {
     display: flex;
     gap: 15px;
 }
- 
+
 .grupo-campo {
     display: flex;
     flex-direction: column;
@@ -402,49 +400,48 @@ ul {
     margin-bottom: 18px;
     width: 100%;
 }
- 
+
 .grupo-campo label {
     font-size: 0.9rem;
     font-weight: 600;
 }
- 
+
 .grupo-campo label .req {
-    color: #e53e3e;
+    color: var(--cor-alerta);
     margin-left: 3px;
 }
- 
+
 .grupo-campo input,
 .grupo-campo select,
 .grupo-campo textarea {
-    -webkit-appearance: none;
-    appearance: none;
-    padding-right: 30px;
-    border: 1px solid #c5ddb8;
+    border: 1px solid var(--cor-borda);
     border-radius: 8px;
     padding: 12px;
     font-size: 0.95rem;
     font-family: 'Source Sans 3', sans-serif;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: var(--cor-branco);
 }
- 
+
+.grupo-campo input,
+.grupo-campo textarea {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 .grupo-campo input:focus,
 .grupo-campo select:focus,
 .grupo-campo textarea:focus {
     outline: none;
-    border-color: #4caf35;
+    border-color: var(--cor-primaria);
     box-shadow: 0 0 5px rgba(76, 175, 53, 0.3);
 }
- 
+
 .grupo-campo select {
     cursor: pointer;
-    background-color: white;
-    background-image: url('imagens/seta.svg');
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
 }
- 
+
 .grupo-campo textarea {
     min-height: 120px;
     resize: vertical;
@@ -455,7 +452,7 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: white;
+    color: var(--cor-branco);
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 600;
     cursor: pointer;
@@ -463,33 +460,36 @@ ul {
 }
 
 .botao-principal {
-    background: #4caf35;
+    background: var(--cor-primaria);
     padding: 13px 30px;
     border-radius: 50px;
+    text-decoration: none;
 }
- 
+
 .botao-principal:hover {
     background: #3a6b1a;
 }
 
 .botao-enviar {
     width: 100%;
-    background: #2d5016;
+    background: var(--cor-secundaria);
     border: none;
     padding: 15px;
     border-radius: 8px;
     font-size: 1rem;
 }
- 
-.botao-enviar:hover {
+
+.botao-enviar:not(.botao-invalido):hover {
     background: #3a6b1a;
 }
+
 .botao-enviar:not(:disabled):not(.botao-invalido):active {
     transform: scale(0.98);
     background: #254212;
 }
+
 .rodape {
-    background: #0a0a0a;
+    background: var(--cor-preto);
     color: rgba(255,255,255,0.6);
     text-align: center;
     padding: 22px;
@@ -517,13 +517,12 @@ ul {
     flex-shrink: 0;
     border-radius: 12px;
     padding: 20px;
-    position: static;
 }
 
 .indice h2 {
     font-size: 0.85rem;
     font-weight: 700;
-    color: #2d5016;
+    color: var(--cor-secundaria);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 14px;
@@ -545,7 +544,7 @@ ul {
 }
 
 .indice a:hover {
-    color: #4caf35;
+    color: var(--cor-primaria);
 }
 
 .artigos {
@@ -567,11 +566,10 @@ ul {
 }
 
 .titulo-artigo {
-    font-family: 'Merriweather', serif;
     font-size: 1.25rem;
     margin-bottom: 16px;
     padding-left: 14px;
-    border-left: 4px solid #4caf35;
+    border-left: 4px solid var(--cor-primaria);
 }
 
 .texto-artigo {
@@ -588,7 +586,7 @@ ul {
 .subtitulo {
     font-size: 1rem;
     font-weight: 700;
-    color: #2d5016;
+    color: var(--cor-secundaria);
     margin: 20px 0 10px;
 }
 
@@ -617,13 +615,13 @@ ul {
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 16px;
-    border-bottom: 1px solid #4caf35;
+    border-bottom: 1px solid var(--cor-primaria);
     padding-bottom: 1px;
     transition: color 0.15s;
 }
 
 .link-lei:hover {
-    color: #4caf35;
+    color: var(--cor-primaria);
 }
 
 @media (max-width: 768px) {
@@ -636,7 +634,7 @@ ul {
         flex-direction: column;
     }
  
-    .info-contato, .busca, .indice {
+    .info-contato, .busca {
         width: 100%;
     }
  
@@ -649,24 +647,15 @@ ul {
         font-size: 2rem;
     }
 
-    .indice {
-        position: static;
-    }
-
     .artigo {
         padding: 24px 20px;
     }
 }
 
 .botao-invalido {
-    background-color: #a0a0a0 !important; 
+    background-color: #a0a0a0;
     cursor: not-allowed;
     opacity: 0.7;
-}
-
-.ponto {
-    position: relative;
-    cursor: help;      
 }
 
 .com-tooltip {
@@ -681,11 +670,11 @@ ul {
 .com-tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 140%;
-    left: 190%;
-    transform: translateX(-10px); 
-    background: #1a2e0d;
-    color: white;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cor-preto);
+    color: var(--cor-branco);
     padding: 8px 12px;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);

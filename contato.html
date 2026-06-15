@@ -30,7 +30,7 @@
 
   <main class="conteudo">
 
-    <section class="secao-contato">
+    <section class="secao-padrao secao-contato">
 
       <h1 class="titulo-contato" id="titulo-contato">
         <i data-lucide="mail" width="34" height="34"></i>
@@ -87,7 +87,7 @@
 
             <div class="grupo-campo">
               <label for="nome">
-                Nome Completo <abbr title="obrigatório">*</abbr>
+                Nome Completo <span class="req">*</span>
               </label>
 
               <input
@@ -97,14 +97,14 @@
                 placeholder="João da Silva"
                 required
                 autocomplete="name"
-                pattern="^[A-Za-zÀ-ÿ]{2,}(\s[A-Za-zÀ-ÿ]{2,})+$"
-                title="Digite seu nome completo (pelo menos duas palavras, cada uma com 2 ou mais letras)"
+                pattern="^[A-Za-zÀ-ú]{2,}(\s[A-Za-zÀ-ú]{2,})+$"
+                title="Digite seu nome completo (nome e pelo menos um sobrenome)"
               >
             </div>
 
             <div class="grupo-campo">
               <label for="email">
-                E-mail <abbr title="obrigatório">*</abbr>
+                E-mail <span class="req">*</span>
               </label>
 
               <input
@@ -123,11 +123,10 @@
 
           <div class="grupo-campo">
             <label for="assunto">
-              Assunto <abbr title="obrigatório">*</abbr>
+              Assunto <span class="req">*</span>
             </label>
 
-            <select id="assunto" name="assunto" required
-              title="Selecione um assunto">
+            <select id="assunto" name="assunto" required title="Selecione um assunto">
               <option value="" selected disabled>
                 Selecione um assunto...
               </option>
