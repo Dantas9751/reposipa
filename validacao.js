@@ -17,9 +17,8 @@ form.addEventListener("input", verificarFormulario);
 
 
 form.addEventListener("submit", function(event) {
-    if (!form.checkValidity()) {
-        event.preventDefault(); 
-    } else {
-        alert("Mensagem enviada com sucesso!");
-    }
+    event.preventDefault(); 
+    alert("Mensagem enviada com sucesso!");
+    form.reset(); 
+    verificarFormulario(); 
 });

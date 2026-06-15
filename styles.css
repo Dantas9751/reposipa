@@ -670,9 +670,9 @@ ul {
 .com-tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 130%;
+    bottom: 120%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(10%);
     background: var(--cor-preto);
     color: var(--cor-branco);
     padding: 8px 12px;
