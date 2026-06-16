@@ -268,7 +268,7 @@ ul {
 }
 
 .area-mapa {
-    max-width: 900px;
+    max-width: 905px;
     min-height: 460px;
     margin: 0 auto;
     border-radius: 12px;
@@ -579,9 +579,6 @@ ul {
     line-height: 1.7;
 }
 
-.texto-artigo:last-of-type {
-    margin-bottom: 0;
-}
 
 .subtitulo {
     font-size: 1rem;
