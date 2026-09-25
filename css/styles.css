@@ -40,7 +40,7 @@ ul {
     list-style: none;
 }
 
-.logo, .titulo-banner, .titulo-recursos, .titulo-mapa, .titulo-contato, .titulo-leis, .titulo-artigo {
+.logo, .titulo-banner, .titulo-recursos, .titulo-mapa, .titulo-contato, .titulo-leis, .titulo-artigo, .titulo-faq, .titulo-painel {
     font-family: 'Merriweather', serif;
 }
 
@@ -66,8 +66,9 @@ ul {
     font-weight: bold;
 }
 
-.logo svg {
+.logo i {
     color: var(--cor-primaria);
+    font-size: 1.6rem;
 }
 
 .links-menu {
@@ -94,6 +95,10 @@ ul {
     border: none;
     display: flex;
     align-items: center;
+}
+
+.acessibilidade .material-symbols-outlined {
+    font-size: 2rem;
 }
 
 .conteudo {
@@ -214,7 +219,8 @@ ul {
 
 .titulo-mapa, 
 .titulo-contato, 
-.titulo-leis {
+.titulo-leis,
+.titulo-faq {
     color: var(--cor-secundaria);
     display: flex;
     align-items: center;
@@ -276,9 +282,9 @@ ul {
     overflow: hidden;
 }
 
-.area-mapa img {
+#mapa {
     width: 100%;
-    height: 100%;
+    height: 460px;
     object-fit: cover;
     display: block;
 }
@@ -290,6 +296,11 @@ ul {
     padding: 12px;
     border-radius: 8px;
     z-index: 800;
+}
+
+.leaflet-bar {
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .legenda ul {
@@ -333,7 +344,7 @@ ul {
 }
 
 .azul    { background: #3b82f6; }
-.vermelho{ background: #ef4444; }
+.verde   { background: #22a33a; }
 .amarelo { background: #d4a017; }
 
 .subtitulo-contato {
@@ -440,6 +451,12 @@ ul {
 
 .grupo-campo select {
     cursor: pointer;
+    appearance: none;
+    background-image: url('../imagens/seta.svg');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 14px;
+    padding-right: 40px;
 }
 
 .grupo-campo textarea {
@@ -490,13 +507,13 @@ ul {
 
 .rodape {
     background: var(--cor-preto);
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.85);
     text-align: center;
     padding: 22px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
 }
 
-.texto-leis {
+.texto-leis, .texto-faq {
     text-align: center;
     color: #6b7c5e;
     max-width: 560px;
@@ -621,32 +638,30 @@ ul {
     color: var(--cor-primaria);
 }
 
-@media (max-width: 768px) {
-    .links-menu {
-        gap: 12px;
-        font-size: 0.85rem;
-    }
- 
-    .corpo-contato, .linha-formulario, .controles, .conteudo-leis {
-        flex-direction: column;
-    }
- 
-    .info-contato, .busca {
-        width: 100%;
-    }
- 
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
- 
-    .titulo-banner {
-        font-size: 2rem;
-    }
+.dica-campo {
+    font-size: 0.8rem;
+    color: #6b7c5e;
+}
 
-    .artigo {
-        padding: 24px 20px;
-    }
+.botoes-formulario {
+    display: flex;
+    gap: 12px;
+}
+
+.botao-limpar {
+    background: var(--cor-branco);
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 15px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
+    cursor: pointer;
+}
+
+.botao-limpar:hover {
+    border-color: var(--cor-secundaria);
 }
 
 .botao-invalido {
@@ -689,8 +704,444 @@ ul {
     pointer-events: none;        
 }
 
+.com-tooltip::after {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
 .ponto:hover::after,
 .com-tooltip:hover::after {
     opacity: 1;
     visibility: visible;
+}
+.perguntas {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pergunta {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 22px 26px;
+}
+
+.titulo-pergunta {
+    font-size: 1.05rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 8px;
+}
+
+.resposta {
+    font-size: 0.95rem;
+    color: #3d4f30;
+}
+
+.caixa-duvidas {
+    max-width: 820px;
+    margin: 40px auto 0;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border-radius: 18px;
+    padding: 36px 30px;
+    text-align: center;
+}
+
+.titulo-duvidas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.titulo-duvidas i {
+    color: var(--cor-primaria);
+}
+
+.caixa-duvidas p {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    color: rgba(255,255,255,0.85);
+}
+
+.painel-acessibilidade {
+    position: fixed;
+    top: 70px;
+    right: 16px;
+    width: 380px;
+    max-width: calc(100% - 32px);
+    max-height: calc(100% - 86px);
+    overflow-y: auto;
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+.painel-acessibilidade[hidden] {
+    display: none;
+}
+
+.topo-painel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
+.icone-painel {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+}
+
+.titulo-painel {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+}
+
+.fechar-painel {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.bloco-painel {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.bloco-painel h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.opcoes-daltonismo, .botoes-texto {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.opcao-daltonismo {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 6px 0;
+    font-size: 0.7rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.opcao-daltonismo.selecionado {
+    border-color: var(--cor-primaria);
+}
+
+.bolinha {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bolinha.desativado    { background: var(--cor-secundaria); color: var(--cor-branco); }
+.bolinha.protanopia    { background: #ef4444; }
+.bolinha.deuteranopia  { background: #facc15; }
+.bolinha.tritanopia    { background: #38bdf8; }
+
+.linha-contraste {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chave {
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    background: #c4c4c4;
+    position: relative;
+    cursor: pointer;
+}
+
+.chave::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--cor-branco);
+    transition: left 0.2s;
+}
+
+.chave:checked {
+    background: var(--cor-primaria);
+}
+
+.chave:checked::before {
+    left: 23px;
+}
+
+.botao-texto {
+    flex: 1;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.botao-texto:hover {
+    background: var(--cor-primaria);
+}
+
+.dicas-painel {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.dicas-painel i {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+}
+
+html.protanopia {
+    --cor-primaria: #65a30d;
+    --cor-secundaria: #2f4a0d;
+    --cor-fundo: #f7fee7;
+    --cor-borda: #d9f99d;
+}
+
+html.protanopia .menu {
+    background: #166534;
+}
+
+html.deuteranopia {
+    --cor-primaria: #46ac43;
+    --cor-secundaria: #2d5a27;
+    --cor-fundo: #edfff0;
+    --cor-borda: #bfe3c0;
+}
+
+html.tritanopia {
+    --cor-primaria: #06b6d4;
+    --cor-secundaria: #0284c7;
+    --cor-fundo: #e0f2fe;
+    --cor-borda: #bae6fd;
+    --cor-texto: #0f172a;
+}
+
+html.tritanopia .menu {
+    background: #0e7490;
+}
+
+html.alto-contraste {
+    --cor-primaria: #ffd600;
+    --cor-secundaria: #000000;
+    --cor-fundo: #000000;
+    --cor-borda: #ffffff;
+    --cor-texto: #ffffff;
+}
+
+html.alto-contraste .menu {
+    border-bottom: 1px solid #ffffff;
+}
+
+html.alto-contraste .card,
+html.alto-contraste .busca,
+html.alto-contraste .campo-busca,
+html.alto-contraste .botao-historico,
+html.alto-contraste .area-mapa,
+html.alto-contraste .legenda,
+html.alto-contraste .indice,
+html.alto-contraste .artigo,
+html.alto-contraste .pergunta,
+html.alto-contraste .caixa-duvidas,
+html.alto-contraste .info-contato,
+html.alto-contraste .bloco-painel,
+html.alto-contraste .botao-limpar,
+html.alto-contraste .grupo-campo input,
+html.alto-contraste .grupo-campo textarea {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+html.alto-contraste .texto-recursos,
+html.alto-contraste .texto-leis,
+html.alto-contraste .texto-faq,
+html.alto-contraste .texto-artigo,
+html.alto-contraste .resposta,
+html.alto-contraste .lista li,
+html.alto-contraste .numero,
+html.alto-contraste .citacao,
+html.alto-contraste .icone-card,
+html.alto-contraste .caixa-duvidas p,
+html.alto-contraste .dica-campo,
+html.alto-contraste .opcao-daltonismo {
+    color: #ffffff;
+}
+
+html.alto-contraste .titulo-recursos,
+html.alto-contraste .titulo-mapa,
+html.alto-contraste .titulo-contato,
+html.alto-contraste .titulo-leis,
+html.alto-contraste .titulo-faq,
+html.alto-contraste .titulo-pergunta,
+html.alto-contraste .titulo-duvidas,
+html.alto-contraste .titulo-painel,
+html.alto-contraste .indice a,
+html.alto-contraste .link-lei {
+    color: #ffd600;
+}
+
+html.alto-contraste .botao-principal,
+html.alto-contraste .botao-enviar,
+html.alto-contraste .btn-dark,
+html.alto-contraste .botao-texto {
+    background: #ffd600;
+    color: #000000;
+}
+
+html.alto-contraste .grupo-campo select {
+    background-color: #000000;
+    background-image: url('../imagens/seta-branca.svg');
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        position: sticky;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        row-gap: 4px;
+    }
+
+    .links-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        margin: 0;
+    }
+
+    .acessibilidade {
+        margin-left: auto;
+    }
+
+    .conteudo {
+        margin-top: 0;
+    }
+
+    .painel-acessibilidade {
+        top: 100px;
+        max-height: calc(100% - 116px);
+    }
+
+    .secao-padrao {
+        padding: 40px 20px;
+    }
+ 
+    .corpo-contato, .linha-formulario, .controles, .conteudo-leis {
+        flex-direction: column;
+    }
+ 
+    .info-contato, .busca, .indice {
+        width: 100%;
+    }
+ 
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+ 
+    .titulo-banner {
+        font-size: 2rem;
+    }
+
+    .artigo {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 8px 16px;
+    }
+
+    .links-menu {
+        gap: 4px 14px;
+    }
+
+    .secao-padrao {
+        padding: 32px 16px;
+    }
+
+    .titulo-banner {
+        font-size: 1.7rem;
+    }
+
+    .titulo-recursos,
+    .titulo-mapa,
+    .titulo-contato,
+    .titulo-leis,
+    .titulo-faq {
+        font-size: 1.5rem;
+    }
+
+    .pergunta,
+    .info-contato {
+        padding: 20px;
+    }
+
+    .caixa-duvidas {
+        padding: 28px 20px;
+    }
+
+    .legenda {
+        left: 10px;
+        bottom: 10px;
+        padding: 10px;
+    }
+
+    .botoes-formulario {
+        flex-direction: column-reverse;
+    }
 }

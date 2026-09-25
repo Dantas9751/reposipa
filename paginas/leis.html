@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIPA - Legislação Ambiental</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=accessibility_new">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
   <nav class="menu">
-    <a href="index.html" class="logo">
-      <i data-lucide="leaf" width="30" height="30"></i>
+    <a href="../index.html" class="logo">
+      <i class="fa-solid fa-leaf"></i>
       SIPA
     </a>
 
     <ul class="links-menu">
-      <li><a href="index.html">Início</a></li>
+      <li><a href="../index.html">Início</a></li>
       <li><a href="leis.html" class="ativo">Leis</a></li>
       <li><a href="mapa.html">Mapa</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
 
     <button class="acessibilidade" title="Acessibilidade">
-      <i data-lucide="accessibility" width="30" height="30"></i>
+      <span class="material-symbols-outlined">accessibility_new</span>
     </button>
   </nav>
 
@@ -33,7 +34,7 @@
     <section class="secao-padrao leis">
 
       <h1 class="titulo-leis" id="titulo-leis">
-        <i data-lucide="scale" width="32" height="32"></i>
+        <i class="fa-solid fa-scale-balanced"></i>
         Legislação Ambiental
       </h1>
 
@@ -51,21 +52,21 @@
           <ul>
             <li>
               <a href="#pnma">
-                <i data-lucide="file-text" width="14" height="14"></i>
+                <i class="fa-solid fa-file-lines"></i>
                 Política Nacional do Meio Ambiente
               </a>
             </li>
 
             <li>
               <a href="#codigo">
-                <i data-lucide="shield" width="14" height="14"></i>
+                <i class="fa-solid fa-shield"></i>
                 Código Florestal
               </a>
             </li>
 
             <li>
               <a href="#snuc">
-                <i data-lucide="file-check" width="14" height="14"></i>
+                <i class="fa-solid fa-file-circle-check"></i>
                 SNUC
               </a>
             </li>
@@ -128,7 +129,7 @@
 
             <a href="#" class="link-lei">
               Ler lei completa
-              <i data-lucide="external-link" width="14" height="14"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
 
           </article>
@@ -180,9 +181,7 @@
     <p>© 2026 SIPA - Sistema Integrado de Planejamento Ambiental. Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <script src="../js/acessibilidade.js"></script>
 
 </body>
 </html>

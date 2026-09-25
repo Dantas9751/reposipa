@@ -16,6 +16,11 @@ verificarFormulario();
 form.addEventListener("input", verificarFormulario);
 
 
+form.addEventListener("reset", function() {
+    setTimeout(verificarFormulario, 0);
+});
+
+
 form.addEventListener("submit", function(event) {
     event.preventDefault(); 
     alert("Mensagem enviada com sucesso!");
