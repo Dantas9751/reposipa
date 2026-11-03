@@ -1,0 +1,135 @@
+.banner {
+    position: relative;
+    min-height: 420px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.fundo-banner {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.55);
+}
+
+.texto-banner {
+    position: relative;
+    text-align: center;
+    max-width: 700px;
+    padding: 80px 20px;
+}
+
+.titulo-banner {
+    font-family: 'Merriweather', serif;
+    color: var(--cor-branco);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subtitulo-banner {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+.recursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo-recursos {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+}
+
+.linha-recursos {
+    width: 50px;
+    height: 3px;
+    background: var(--cor-primaria);
+    margin: 12px auto 18px;
+    border: none;
+}
+
+.texto-recursos {
+    max-width: 500px;
+    margin: 0 auto 50px;
+    color: #6b7c5e;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.card {
+    width: 280px;
+    background: #dff0d8;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border: 1px solid var(--cor-borda);
+}
+
+.icone-card {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(76,175,53,0.15);
+    color: #3a6b1a;
+    margin-bottom: 18px;
+}
+
+.titulo-card {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.texto-card {
+    font-size: 0.9rem;
+}
+
+html.alto-contraste .card {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+html.alto-contraste .texto-recursos,
+html.alto-contraste .icone-card {
+    color: #ffffff;
+}
+
+html.alto-contraste .titulo-recursos {
+    color: #ffd600;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .titulo-banner {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-banner {
+        font-size: 1.7rem;
+    }
+
+    .titulo-recursos {
+        font-size: 1.5rem;
+    }
+}

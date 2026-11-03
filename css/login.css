@@ -1,0 +1,34 @@
+.texto-conta {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario-conta {
+    display: grid;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.formulario-conta .botao-enviar {
+    margin-bottom: 12px;
+}
+
+.troca-conta {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.95rem;
+}
+
+.troca-conta a {
+    color: #3a6b1a;
+    font-weight: 600;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+.troca-conta a:hover {
+    color: var(--cor-primaria);
+}
+
+html.alto-contraste .troca-conta a {
+    color: #ffd600;
+}

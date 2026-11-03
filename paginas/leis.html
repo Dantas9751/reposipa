@@ -6,7 +6,9 @@
   <title>SIPA - Legislação Ambiental</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=accessibility_new">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/acessibilidade.css">
+  <link rel="stylesheet" href="../css/leis.css">
 </head>
 <body>
 
@@ -22,10 +24,15 @@
       <li><a href="mapa.html">Mapa</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="contato.html">Contato</a></li>
+      <li><a href="login.html">Login</a></li>
     </ul>
 
     <button class="acessibilidade" title="Acessibilidade">
       <span class="material-symbols-outlined">accessibility_new</span>
+    </button>
+
+    <button class="botao-menu" title="Abrir menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
     </button>
   </nav>
 
@@ -33,7 +40,7 @@
 
     <section class="secao-padrao leis">
 
-      <h1 class="titulo-leis" id="titulo-leis">
+      <h1 class="titulo-pagina" id="titulo-leis">
         <i class="fa-solid fa-scale-balanced"></i>
         Legislação Ambiental
       </h1>
@@ -181,6 +188,7 @@
     <p>© 2026 SIPA - Sistema Integrado de Planejamento Ambiental. Todos os direitos reservados.</p>
   </footer>
 
+  <script src="../js/menu.js"></script>
   <script src="../js/acessibilidade.js"></script>
 
 </body>

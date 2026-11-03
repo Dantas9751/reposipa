@@ -1,0 +1,126 @@
+.controles {
+    display: flex;
+    gap: 15px;
+    max-width: 920px;
+    margin: 0 auto 20px;
+}
+
+.busca,
+.botao-historico,
+.area-mapa,
+.legenda {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+}
+
+.busca {
+    display: flex;
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.campo-busca {
+    flex: 1;
+    border: none;
+    padding: 12px 15px;
+    outline: none;
+}
+
+.btn-dark {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.botao-historico {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.area-mapa {
+    position: relative;
+    max-width: 905px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#mapa {
+    height: 460px;
+}
+
+.leaflet-bar {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.legenda {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 800;
+}
+
+.titulo-legenda {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item-legenda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+}
+
+.ponto {
+    width: 16px;
+    height: 8px;
+    border-radius: 3px;
+}
+
+.azul    { background: #3b82f6; }
+.verde   { background: #22a33a; }
+.amarelo { background: #d4a017; }
+
+html.alto-contraste .busca,
+html.alto-contraste .campo-busca,
+html.alto-contraste .botao-historico,
+html.alto-contraste .area-mapa,
+html.alto-contraste .legenda {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+html.alto-contraste .btn-dark {
+    background: #ffd600;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .controles {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .legenda {
+        left: 10px;
+        bottom: 10px;
+        padding: 10px;
+    }
+}

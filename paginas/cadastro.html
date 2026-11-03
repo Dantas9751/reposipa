@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPA - Cadastro</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=accessibility_new">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/acessibilidade.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <nav class="menu">
+    <a href="../index.html" class="logo">
+      <i class="fa-solid fa-leaf"></i>
+      SIPA
+    </a>
+
+    <ul class="links-menu">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="leis.html">Leis</a></li>
+      <li><a href="mapa.html">Mapa</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="login.html" class="ativo">Login</a></li>
+    </ul>
+
+    <button class="acessibilidade" title="Acessibilidade">
+      <span class="material-symbols-outlined">accessibility_new</span>
+    </button>
+
+    <button class="botao-menu" title="Abrir menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <main class="conteudo">
+
+    <section class="secao-padrao">
+
+      <h1 class="titulo-pagina">
+        <i class="fa-solid fa-user-plus"></i>
+        Cadastro
+      </h1>
+
+      <p class="texto-conta">Crie sua conta na plataforma SIPA.</p>
+
+      <form class="formulario-conta" data-mensagem="O cadastro ainda não está disponível: o SIPA ainda não tem servidor.">
+
+        <div class="grupo-campo">
+          <label for="nome">
+            Nome Completo <span class="req">*</span>
+          </label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="João da Silva"
+            required
+            autocomplete="name"
+          >
+        </div>
+
+        <div class="grupo-campo">
+          <label for="email">
+            E-mail <span class="req">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu.email@exemplo.com"
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="grupo-campo">
+          <label for="senha">
+            Senha <span class="req">*</span>
+          </label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Crie uma senha"
+            minlength="8"
+            required
+            autocomplete="new-password"
+          >
+          <small class="dica-campo">Mínimo de 8 caracteres.</small>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="confirmar-senha">
+            Confirmar senha <span class="req">*</span>
+          </label>
+          <input
+            type="password"
+            id="confirmar-senha"
+            name="confirmar-senha"
+            placeholder="Digite a senha novamente"
+            required
+            autocomplete="new-password"
+          >
+        </div>
+
+        <button class="botao-enviar" type="submit">
+          Criar conta
+          <i class="fa-solid fa-user-plus"></i>
+        </button>
+
+      </form>
+
+      <p class="troca-conta">
+        Já tem conta? <a href="login.html">Entrar</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 SIPA - Sistema Integrado de Planejamento Ambiental. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/conta.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/acessibilidade.js"></script>
+
+</body>
+</html>

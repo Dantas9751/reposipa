@@ -1,0 +1,163 @@
+.texto-leis {
+    text-align: center;
+    color: #6b7c5e;
+    max-width: 560px;
+    margin: 0 auto 48px;
+}
+
+.conteudo-leis {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    align-items: start;
+    gap: 28px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.indice,
+.artigo {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+}
+
+.indice {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.indice h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.indice ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.indice a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #3a6b1a;
+    transition: color 0.15s;
+}
+
+.indice a:hover {
+    color: var(--cor-primaria);
+}
+
+.artigos {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.artigo {
+    border-radius: 14px;
+    padding: 32px 36px;
+}
+
+.numero {
+    font-size: 0.82rem;
+    color: #6b7c5e;
+    margin-bottom: 8px;
+}
+
+.titulo-artigo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    padding-left: 14px;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.texto-artigo {
+    color: #3d4f30;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin: 20px 0 10px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista li {
+    font-size: 0.93rem;
+    color: #3d4f30;
+    padding-left: 16px;
+    list-style: disc inside;
+}
+
+.citacao {
+    border-left: 3px solid var(--cor-primaria);
+    padding: 10px 16px;
+    margin: 16px 0;
+    color: #3a6b1a;
+    font-style: italic;
+    background: rgba(76,175,53,0.06);
+    border-radius: 0 8px 8px 0;
+}
+
+.link-lei {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3a6b1a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 16px;
+    border-bottom: 1px solid var(--cor-primaria);
+    padding-bottom: 1px;
+    transition: color 0.15s;
+}
+
+.link-lei:hover {
+    color: var(--cor-primaria);
+}
+
+html.alto-contraste .indice,
+html.alto-contraste .artigo {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+html.alto-contraste .texto-leis,
+html.alto-contraste .texto-artigo,
+html.alto-contraste .lista li,
+html.alto-contraste .numero,
+html.alto-contraste .citacao {
+    color: #ffffff;
+}
+
+html.alto-contraste .indice a,
+html.alto-contraste .link-lei {
+    color: #ffd600;
+}
+
+@media (max-width: 768px) {
+    .conteudo-leis {
+        grid-template-columns: 1fr;
+    }
+
+    .artigo {
+        padding: 24px 20px;
+    }
+}

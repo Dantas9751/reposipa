@@ -1,0 +1,232 @@
+.painel-acessibilidade {
+    position: fixed;
+    top: 70px;
+    right: 16px;
+    width: 380px;
+    max-width: calc(100% - 32px);
+    max-height: calc(100% - 86px);
+    overflow-y: auto;
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+.painel-acessibilidade[hidden] {
+    display: none;
+}
+
+.topo-painel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
+.icone-painel {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+}
+
+.titulo-painel {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+}
+
+.fechar-painel {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.bloco-painel {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.bloco-painel h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.opcoes-daltonismo,
+.botoes-texto {
+    display: grid;
+    gap: 8px;
+}
+
+.opcoes-daltonismo {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.botoes-texto {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.opcao-daltonismo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 6px 0;
+    font-size: 0.7rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.opcao-daltonismo.selecionado {
+    border-color: var(--cor-primaria);
+}
+
+.bolinha {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.bolinha.desativado   { background: var(--cor-secundaria); color: var(--cor-branco); }
+.bolinha.protanopia   { background: #ef4444; }
+.bolinha.deuteranopia { background: #facc15; }
+.bolinha.tritanopia   { background: #38bdf8; }
+
+.linha-contraste {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chave {
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    background: #c4c4c4;
+    position: relative;
+    cursor: pointer;
+}
+
+.chave::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--cor-branco);
+    transition: left 0.2s;
+}
+
+.chave:checked {
+    background: var(--cor-primaria);
+}
+
+.chave:checked::before {
+    left: 23px;
+}
+
+.botao-texto {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.botao-texto:hover {
+    background: var(--cor-primaria);
+}
+
+.dicas-painel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.dicas-painel i {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+}
+
+html.protanopia {
+    --cor-primaria: #65a30d;
+    --cor-secundaria: #2f4a0d;
+    --cor-fundo: #f7fee7;
+    --cor-borda: #d9f99d;
+}
+
+html.protanopia .menu {
+    background: #166534;
+}
+
+html.deuteranopia {
+    --cor-primaria: #46ac43;
+    --cor-secundaria: #2d5a27;
+    --cor-fundo: #edfff0;
+    --cor-borda: #bfe3c0;
+}
+
+html.tritanopia {
+    --cor-primaria: #06b6d4;
+    --cor-secundaria: #0284c7;
+    --cor-fundo: #e0f2fe;
+    --cor-borda: #bae6fd;
+    --cor-texto: #0f172a;
+}
+
+html.tritanopia .menu {
+    background: #0e7490;
+}
+
+html.alto-contraste {
+    --cor-primaria: #ffd600;
+    --cor-secundaria: #000000;
+    --cor-fundo: #000000;
+    --cor-borda: #ffffff;
+    --cor-texto: #ffffff;
+}
+
+html.alto-contraste .bloco-painel {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+html.alto-contraste .opcao-daltonismo {
+    color: #ffffff;
+}
+
+html.alto-contraste .titulo-painel {
+    color: #ffd600;
+}
+
+html.alto-contraste .botao-texto {
+    background: #ffd600;
+    color: #000000;
+}
