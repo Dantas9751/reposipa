@@ -6,9 +6,9 @@
   <title>SIPA - Fale Conosco</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=accessibility_new">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/acessibilidade.css">
-  <link rel="stylesheet" href="../css/contato.css">
+  <link rel="stylesheet" href="../css/base.css?v=5">
+  <link rel="stylesheet" href="../css/acessibilidade.css?v=5">
+  <link rel="stylesheet" href="../css/contato.css?v=5">
 </head>
 <body>
  
@@ -24,11 +24,17 @@
       <li><a href="mapa.html">Mapa</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="contato.html" class="ativo">Contato</a></li>
+      <li class="item-entrar">
+        <a href="login.html" class="botao-entrar">
+          <i class="fa-solid fa-user"></i>
+          Entrar
+        </a>
+      </li>
     </ul>
 
-    <a href="login.html" class="botao-entrar" aria-label="Entrar">
+    <a href="login.html" class="botao-entrar">
       <i class="fa-solid fa-user"></i>
-      <span>Entrar</span>
+      Entrar
     </a>
  
     <button class="acessibilidade" title="Acessibilidade">
@@ -42,7 +48,7 @@
  
   <main class="conteudo">
  
-    <section class="secao-padrao secao-contato">
+    <section class="secao-padrao">
  
       <h1 class="titulo-pagina" id="titulo-contato">
         <i class="fa-solid fa-envelope"></i>
@@ -109,7 +115,7 @@
                 placeholder="João da Silva"
                 required
                 autocomplete="name"
-                pattern="^[A-Za-zÀ-ú]{2,}(\s[A-Za-zÀ-ú]{2,})+$"
+                pattern="^\p{L}[\p{L}'\-]+(\s\p{L}[\p{L}'\-]*)+$"
                 title="Digite seu nome completo (nome e pelo menos um sobrenome)"
               >
             </div>
@@ -126,7 +132,7 @@
                 placeholder="joao@exemplo.com"
                 required
                 autocomplete="email"
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                 title="Digite um e-mail válido (ex: seu.email@exemplo.com)"
               >
             </div>
@@ -189,10 +195,10 @@
   <footer class="rodape">
     <p>© 2026 SIPA - Sistema Integrado de Planejamento Ambiental. Todos os direitos reservados.</p>
   </footer>
-  <script src="../js/validacao.js"></script>
+  <script src="../js/validacao.js?v=5"></script>
  
-  <script src="../js/menu.js"></script>
-  <script src="../js/acessibilidade.js"></script>
+  <script src="../js/menu.js?v=5"></script>
+  <script src="../js/acessibilidade.js?v=5"></script>
 
 </body>
 </html>

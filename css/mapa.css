@@ -20,6 +20,11 @@
     overflow: hidden;
 }
 
+.busca:focus-within {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px var(--cor-foco);
+}
+
 .campo-busca {
     flex: 1;
     border: none;

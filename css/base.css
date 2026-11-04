@@ -32,6 +32,7 @@
 
 html {
     height: 100%;
+    scroll-padding-top: 78px;
 }
 
 body {
@@ -103,7 +104,7 @@ ul {
     align-items: center;
     gap: 8px;
     padding: 6px 16px;
-    margin-right: 12px;
+    margin-right: 20px;
     border: 1px solid rgba(255,255,255,0.6);
     border-radius: 50px;
     color: var(--cor-branco);
@@ -119,6 +120,10 @@ ul {
 .botao-entrar.ativo {
     background: var(--cor-branco);
     color: var(--cor-menu);
+}
+
+.item-entrar {
+    display: none;
 }
 
 .acessibilidade,
@@ -363,37 +368,95 @@ html.alto-contraste .grupo-campo select {
     }
 
     .links-menu {
-        display: none;
-        border-top: 1px solid rgba(255,255,255,0.15);
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 58px;
         right: 0;
+        bottom: 0;
+        width: min(80%, 300px);
         flex-direction: column;
         gap: 0;
         margin: 0;
-        padding: 8px 20px 16px;
-        background: inherit;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        padding: 12px 24px 24px;
+        background: var(--cor-menu);
+        overflow-y: auto;
+        box-shadow: -8px 0 24px rgba(0,0,0,0.25);
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.25s ease, visibility 0.25s;
     }
 
     .menu.aberto .links-menu {
-        display: flex;
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .fundo-menu {
+        position: fixed;
+        top: 58px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s, visibility 0.25s;
+        z-index: 999;
+    }
+
+    .fundo-menu.visivel {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.menu-aberto {
+        overflow: hidden;
     }
 
     html.alto-contraste .links-menu {
-        border-bottom: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+    }
+
+    .links-menu li {
+        border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
     .links-menu a {
         display: block;
-        padding: 10px 0;
-        font-size: 1rem;
+        padding: 14px 0;
+        font-size: 1.05rem;
     }
 
-    .botao-entrar {
+    .menu > .botao-entrar {
+        display: none;
+    }
+
+    .links-menu .item-entrar {
+        display: block;
+        margin-top: auto;
+        padding-top: 24px;
+        border-bottom: none;
+    }
+
+    .links-menu .botao-entrar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 12px 20px;
+        color: var(--cor-branco);
+        font-weight: 600;
+    }
+
+    .links-menu .botao-entrar:hover {
+        color: var(--cor-branco);
+    }
+
+    .links-menu .botao-entrar.ativo {
+        color: var(--cor-menu);
+    }
+
+    .acessibilidade {
         margin-left: auto;
-        margin-right: 4px;
     }
 
     .botao-menu {
@@ -408,14 +471,6 @@ html.alto-contraste .grupo-campo select {
 @media (max-width: 480px) {
     .menu {
         padding: 0 16px;
-    }
-
-    .botao-entrar {
-        padding: 8px 10px;
-    }
-
-    .botao-entrar span {
-        display: none;
     }
 
     .secao-padrao {

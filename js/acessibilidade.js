@@ -94,12 +94,33 @@ function aplicar() {
     localStorage.setItem("tamanhoTexto", tamanhoTexto);
 }
 
+function definirPainelAberto(aberto) {
+    painel.hidden = !aberto;
+    botaoAbrir.setAttribute("aria-expanded", aberto);
+}
+
+botaoAbrir.setAttribute("aria-expanded", false);
+
 botaoAbrir.addEventListener("click", function () {
-    painel.hidden = !painel.hidden;
+    definirPainelAberto(painel.hidden);
 });
 
 botaoFechar.addEventListener("click", function () {
-    painel.hidden = true;
+    definirPainelAberto(false);
+});
+
+document.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape") {
+        definirPainelAberto(false);
+    }
+});
+
+document.addEventListener("click", function (evento) {
+    const clicouFora = !painel.contains(evento.target) && !botaoAbrir.contains(evento.target);
+
+    if (!painel.hidden && clicouFora) {
+        definirPainelAberto(false);
+    }
 });
 
 botoesDaltonismo.forEach(function (botao) {
