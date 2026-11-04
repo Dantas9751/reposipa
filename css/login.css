@@ -1,30 +1,130 @@
-.texto-conta {
+.cartao-conta {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 28px 32px 32px;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 18px;
+}
+
+.abas-conta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 28px;
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+.aba {
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+    transition: color 0.15s;
+}
+
+.aba:not(.ativa):hover {
+    color: var(--cor-link);
+}
+
+.aba.ativa {
+    background: var(--cor-menu);
+    color: var(--cor-branco);
+}
+
+.titulo-conta {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.texto-conta {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
 }
 
 .formulario-conta {
     display: grid;
-    max-width: 320px;
-    margin: 0 auto;
 }
 
-.formulario-conta .botao-enviar {
-    margin-bottom: 12px;
+.campo-senha {
+    position: relative;
+    display: flex;
 }
 
-.troca-conta {
-    text-align: center;
-    margin-top: 24px;
-    font-size: 0.95rem;
+.campo-senha input {
+    width: 100%;
+    padding-right: 46px;
 }
 
-.troca-conta a {
+.mostrar-senha {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 46px;
+    background: none;
+    border: none;
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+}
+
+.mostrar-senha:hover {
     color: var(--cor-link);
-    font-weight: 600;
-    border-bottom: 1px solid var(--cor-primaria);
 }
 
-.troca-conta a:hover {
-    color: var(--cor-primaria);
+.link-esqueci {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    color: var(--cor-link);
+    text-decoration: underline;
+}
+
+.erro-campo {
+    font-size: 0.8rem;
+    color: var(--cor-alerta);
+}
+
+.aviso-conta {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    background: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.aviso-conta[hidden],
+.erro-campo[hidden] {
+    display: none;
+}
+
+.aviso-conta i {
+    margin-top: 3px;
+    color: var(--cor-link);
+}
+
+html.alto-contraste .cartao-conta,
+html.alto-contraste .aviso-conta {
+    background: #000000;
+}
+
+html.alto-contraste .aba.ativa {
+    background: #ffd600;
+    color: #000000;
+}
+
+@media (max-width: 480px) {
+    .cartao-conta {
+        padding: 20px 20px 24px;
+    }
 }
