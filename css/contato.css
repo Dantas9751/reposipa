@@ -18,7 +18,7 @@
 
 .corpo-contato {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px minmax(0, 1fr);
     gap: 30px;
     max-width: 900px;
     margin: auto;
@@ -57,7 +57,7 @@
 
 .linha-formulario {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
 }
 
@@ -68,8 +68,7 @@
 
 html.alto-contraste .info-contato {
     background: #000000;
-    color: #ffffff;
-    border-color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 @media (max-width: 768px) {

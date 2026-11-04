@@ -45,7 +45,7 @@
 .titulo-recursos {
     font-family: 'Merriweather', serif;
     font-size: 1.8rem;
-    color: var(--cor-secundaria);
+    color: var(--cor-titulo);
 }
 
 .linha-recursos {
@@ -59,7 +59,7 @@
 .texto-recursos {
     max-width: 500px;
     margin: 0 auto 50px;
-    color: #6b7c5e;
+    color: var(--cor-texto-suave);
 }
 
 .cards {
@@ -72,7 +72,7 @@
 
 .card {
     width: 280px;
-    background: #dff0d8;
+    background: var(--cor-card);
     padding: 30px 25px;
     border-radius: 18px;
     border: 1px solid var(--cor-borda);
@@ -84,8 +84,8 @@
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    background: rgba(76,175,53,0.15);
-    color: #3a6b1a;
+    background: var(--cor-icone-fundo);
+    color: var(--cor-link);
     margin-bottom: 18px;
 }
 
@@ -96,21 +96,6 @@
 
 .texto-card {
     font-size: 0.9rem;
-}
-
-html.alto-contraste .card {
-    background: #000000;
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-html.alto-contraste .texto-recursos,
-html.alto-contraste .icone-card {
-    color: #ffffff;
-}
-
-html.alto-contraste .titulo-recursos {
-    color: #ffd600;
 }
 
 @media (max-width: 768px) {

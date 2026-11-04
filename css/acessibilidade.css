@@ -28,13 +28,13 @@
 
 .icone-painel {
     font-size: 2rem;
-    color: var(--cor-primaria);
+    color: var(--cor-link);
 }
 
 .titulo-painel {
     font-family: 'Merriweather', serif;
     font-size: 1.1rem;
-    color: var(--cor-secundaria);
+    color: var(--cor-titulo);
     text-transform: uppercase;
 }
 
@@ -179,10 +179,19 @@ html.protanopia {
     --cor-secundaria: #2f4a0d;
     --cor-fundo: #f7fee7;
     --cor-borda: #d9f99d;
-}
-
-html.protanopia .menu {
-    background: #166534;
+    --cor-titulo: #2f4a0d;
+    --cor-menu: #166534;
+    --cor-menu-ativo: #bef264;
+    --cor-botao: #4d7c0f;
+    --cor-hover: #3f6212;
+    --cor-clique: #365314;
+    --cor-link: #3f6212;
+    --cor-texto-suave: #4d5a3a;
+    --cor-texto-corpo: #365314;
+    --cor-card: #ecfccb;
+    --cor-icone-fundo: rgba(101,163,13,0.15);
+    --cor-citacao-fundo: rgba(101,163,13,0.08);
+    --cor-foco: rgba(101,163,13,0.35);
 }
 
 html.deuteranopia {
@@ -190,18 +199,40 @@ html.deuteranopia {
     --cor-secundaria: #2d5a27;
     --cor-fundo: #edfff0;
     --cor-borda: #bfe3c0;
+    --cor-titulo: #2d5a27;
+    --cor-menu: #2d5a27;
+    --cor-menu-ativo: #b4e8b2;
+    --cor-botao: #2f7d2c;
+    --cor-hover: #247724;
+    --cor-clique: #1d5c1d;
+    --cor-link: #247724;
+    --cor-texto-suave: #4f6150;
+    --cor-texto-corpo: #2f4a30;
+    --cor-card: #dcf5dd;
+    --cor-icone-fundo: rgba(70,172,67,0.15);
+    --cor-citacao-fundo: rgba(70,172,67,0.08);
+    --cor-foco: rgba(70,172,67,0.35);
 }
 
 html.tritanopia {
     --cor-primaria: #06b6d4;
-    --cor-secundaria: #0284c7;
+    --cor-secundaria: #0369a1;
     --cor-fundo: #e0f2fe;
     --cor-borda: #bae6fd;
     --cor-texto: #0f172a;
-}
-
-html.tritanopia .menu {
-    background: #0e7490;
+    --cor-titulo: #0369a1;
+    --cor-menu: #0e7490;
+    --cor-menu-ativo: #cffafe;
+    --cor-botao: #0e7490;
+    --cor-hover: #075985;
+    --cor-clique: #0c4a6e;
+    --cor-link: #0369a1;
+    --cor-texto-suave: #475569;
+    --cor-texto-corpo: #334155;
+    --cor-card: #cffafe;
+    --cor-icone-fundo: rgba(6,182,212,0.15);
+    --cor-citacao-fundo: rgba(6,182,212,0.08);
+    --cor-foco: rgba(6,182,212,0.4);
 }
 
 html.alto-contraste {
@@ -210,6 +241,20 @@ html.alto-contraste {
     --cor-fundo: #000000;
     --cor-borda: #ffffff;
     --cor-texto: #ffffff;
+    --cor-alerta: #ff8080;
+    --cor-titulo: #ffd600;
+    --cor-menu: #000000;
+    --cor-menu-ativo: #ffd600;
+    --cor-botao: #ffd600;
+    --cor-hover: #ffd600;
+    --cor-clique: #ffd600;
+    --cor-link: #ffd600;
+    --cor-texto-suave: #ffffff;
+    --cor-texto-corpo: #ffffff;
+    --cor-card: #000000;
+    --cor-icone-fundo: #000000;
+    --cor-citacao-fundo: #000000;
+    --cor-foco: #ffd600;
 }
 
 html.alto-contraste .bloco-painel {
@@ -222,8 +267,8 @@ html.alto-contraste .opcao-daltonismo {
     color: #ffffff;
 }
 
-html.alto-contraste .titulo-painel {
-    color: #ffd600;
+html.alto-contraste .bolinha.desativado {
+    border: 1px solid #ffffff;
 }
 
 html.alto-contraste .botao-texto {

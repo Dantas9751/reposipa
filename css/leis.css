@@ -1,6 +1,6 @@
 .texto-leis {
     text-align: center;
-    color: #6b7c5e;
+    color: var(--cor-texto-suave);
     max-width: 560px;
     margin: 0 auto 48px;
 }
@@ -28,7 +28,7 @@
 .indice h2 {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--cor-secundaria);
+    color: var(--cor-titulo);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 14px;
@@ -45,7 +45,7 @@
     align-items: center;
     gap: 8px;
     font-size: 0.88rem;
-    color: #3a6b1a;
+    color: var(--cor-link);
     transition: color 0.15s;
 }
 
@@ -66,7 +66,7 @@
 
 .numero {
     font-size: 0.82rem;
-    color: #6b7c5e;
+    color: var(--cor-texto-suave);
     margin-bottom: 8px;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .texto-artigo {
-    color: #3d4f30;
+    color: var(--cor-texto-corpo);
     font-size: 0.95rem;
     margin-bottom: 14px;
     line-height: 1.7;
@@ -88,7 +88,7 @@
 .subtitulo {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--cor-secundaria);
+    color: var(--cor-titulo);
     margin: 20px 0 10px;
 }
 
@@ -100,7 +100,7 @@
 
 .lista li {
     font-size: 0.93rem;
-    color: #3d4f30;
+    color: var(--cor-texto-corpo);
     padding-left: 16px;
     list-style: disc inside;
 }
@@ -109,9 +109,9 @@
     border-left: 3px solid var(--cor-primaria);
     padding: 10px 16px;
     margin: 16px 0;
-    color: #3a6b1a;
+    color: var(--cor-link);
     font-style: italic;
-    background: rgba(76,175,53,0.06);
+    background: var(--cor-citacao-fundo);
     border-radius: 0 8px 8px 0;
 }
 
@@ -119,7 +119,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: #3a6b1a;
+    color: var(--cor-link);
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 16px;
@@ -137,19 +137,6 @@ html.alto-contraste .artigo {
     background: #000000;
     color: #ffffff;
     border-color: #ffffff;
-}
-
-html.alto-contraste .texto-leis,
-html.alto-contraste .texto-artigo,
-html.alto-contraste .lista li,
-html.alto-contraste .numero,
-html.alto-contraste .citacao {
-    color: #ffffff;
-}
-
-html.alto-contraste .indice a,
-html.alto-contraste .link-lei {
-    color: #ffd600;
 }
 
 @media (max-width: 768px) {
