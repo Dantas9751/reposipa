@@ -1,29 +1,18 @@
-const form = document.getElementById("formContato");
+const formulario = document.getElementById("formContato");
 const botaoEnviar = document.querySelector(".botao-enviar");
 
 function verificarFormulario() {
-    if (!form.checkValidity()) {
-        botaoEnviar.classList.add("botao-invalido");
-    } else {
-        botaoEnviar.classList.remove("botao-invalido");
-    }
+    botaoEnviar.classList.toggle("botao-invalido", !formulario.checkValidity());
 }
 
+formulario.addEventListener("input", verificarFormulario);
 
-verificarFormulario();
-
-
-form.addEventListener("input", verificarFormulario);
-
-
-form.addEventListener("reset", function() {
+formulario.addEventListener("reset", function () {
     setTimeout(verificarFormulario, 0);
 });
 
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    alert("Mensagem enviada com sucesso!");
-    form.reset(); 
-    verificarFormulario(); 
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
 });
+
+verificarFormulario();

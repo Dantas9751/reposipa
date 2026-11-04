@@ -8,3 +8,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(mapa);
 
 L.control.zoom({ position: "bottomright" }).addTo(mapa);
+
+document.querySelector(".busca").addEventListener("submit", function (evento) {
+    evento.preventDefault();
+});

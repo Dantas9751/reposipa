@@ -91,30 +91,11 @@
     color: var(--cor-alerta);
 }
 
-.aviso-conta {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 16px;
-    padding: 12px 14px;
-    background: var(--cor-card);
-    border: 1px solid var(--cor-borda);
-    border-radius: 8px;
-    font-size: 0.9rem;
-}
-
-.aviso-conta[hidden],
 .erro-campo[hidden] {
     display: none;
 }
 
-.aviso-conta i {
-    margin-top: 3px;
-    color: var(--cor-link);
-}
-
-html.alto-contraste .cartao-conta,
-html.alto-contraste .aviso-conta {
+html.alto-contraste .cartao-conta {
     background: #000000;
 }
 

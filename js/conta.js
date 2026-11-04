@@ -1,5 +1,4 @@
 const formularioConta = document.querySelector(".formulario-conta");
-const avisoConta = document.querySelector(".aviso-conta");
 const campoSenha = document.getElementById("senha");
 const campoConfirmarSenha = document.getElementById("confirmar-senha");
 const erroConfirmarSenha = document.getElementById("erro-confirmar-senha");
@@ -33,18 +32,6 @@ if (campoConfirmarSenha) {
     campoConfirmarSenha.addEventListener("input", conferirSenhas);
 }
 
-formularioConta.addEventListener("input", function () {
-    avisoConta.hidden = true;
-});
-
 formularioConta.addEventListener("submit", function (evento) {
     evento.preventDefault();
-
-    avisoConta.querySelector("span").textContent = formularioConta.dataset.mensagem;
-    avisoConta.hidden = false;
-
-    formularioConta.reset();
-    botoesMostrarSenha.forEach(function (botao) {
-        definirVisibilidadeSenha(botao, false);
-    });
 });
